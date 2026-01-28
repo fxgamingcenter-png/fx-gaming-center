@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #0b1220;
+    color: #ffffff;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0d1b3d, #0a2a5e);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #4cc9ff;
+    animation: glow 2.5s infinite alternate;
+}
+
+.hero p {
+    margin-top: 10px;
+    opacity: 0.85;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #4cc9ff;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4cc9ff;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* SECTIONS */
+.section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section h2 {
+    text-align: center;
+    color: #4cc9ff;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    text-align: center;
+    opacity: 0.8;
+}
+
+.intro p {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #101d3d;
+    padding: 22px;
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.4s, box-shadow 0.4s;
+    animation: fadeUp 0.8s ease both;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 40px rgba(76,201,255,0.5);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 20px rgba(76,201,255,0.35);
+}
+
+.card h3 {
+    color: #4cc9ff;
+    margin-bottom: 10px;
+}
+
+/* CARTES */
+.dark {
+    background: linear-gradient(135deg, #0a1a3a, #08132c);
+    border-radius: 20px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.price-card {
+    background: #0f2147;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    animation: fadeUp 0.8s ease both;
+}
+
+.price {
+    font-size: 1.4rem;
+    color: #4cc9ff;
+    margin: 10px 0;
+}
+
+.popular {
+    border: 2px solid #4cc9ff;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #4cc9ff;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.note {
+    text-align: center;
+    margin-top: 30px;
+    opacity: 0.8;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25d366;
+    color: white;
+    font-size: 28px;
+    padding: 14px 18px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 0 25px rgba(37,211,102,0.6);
+    animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #060b18;
+    opacity: 0.8;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px rgba(76,201,255,0.6); }
+    to { text-shadow: 0 0 30px rgba(76,201,255,1); }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.2rem; }
+    .cards, .pricing-grid { grid-template-columns: 1fr; }
+}
