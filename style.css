@@ -863,3 +863,190 @@ body::after {
     transform: translate(0, 0);
   }
 }
+
+
+/* =========================================
+   FX GAMING CENTER — COLOR & ANIMATION BOOST
+   À COLLER TOUT EN BAS DU CSS
+========================================= */
+
+/* 🎨 Palette plus riche mais douce */
+:root {
+  --fx-blue: #00eaff;
+  --fx-purple: #7b7cff;
+  --fx-cyan-soft: rgba(0,234,255,0.25);
+  --fx-purple-soft: rgba(123,124,255,0.25);
+}
+
+/* 🌌 Dégradé vivant mais lent */
+body {
+  background:
+    linear-gradient(120deg, #061a2f, #0b3c66, #071f3f);
+  background-size: 200% 200%;
+  animation: bgShift 35s ease infinite;
+}
+
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✨ Titres plus élégants */
+h1, h2, h3 {
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+h1:hover,
+h2:hover,
+h3:hover {
+  color: var(--fx-blue);
+  text-shadow:
+    0 0 8px rgba(0,234,255,0.4),
+    0 0 18px rgba(0,234,255,0.25);
+}
+
+/* 🧊 Cartes : animation plus fluide */
+.card {
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    background 0.45s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.4),
+    0 0 20px var(--fx-cyan-soft);
+  background: rgba(255,255,255,0.09);
+}
+
+/* 🖼️ Images : effet gaming clean */
+.card img {
+  transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+.card:hover img {
+  transform: scale(1.07);
+  filter: brightness(1.05) saturate(1.05);
+}
+
+/* 🔗 Liens plus stylés */
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--fx-blue);
+}
+
+/* ✨ Apparition au scroll (plus smooth) */
+.reveal {
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+/* 📱 Mobile : animations encore plus douces */
+@media (max-width: 768px) {
+  body {
+    animation-duration: 45s;
+  }
+
+  .card:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+}/* =========================================
+   FX GAMING CENTER — COLOR & ANIMATION BOOST
+   À COLLER TOUT EN BAS DU CSS
+========================================= */
+
+/* 🎨 Palette plus riche mais douce */
+:root {
+  --fx-blue: #00eaff;
+  --fx-purple: #7b7cff;
+  --fx-cyan-soft: rgba(0,234,255,0.25);
+  --fx-purple-soft: rgba(123,124,255,0.25);
+}
+
+/* 🌌 Dégradé vivant mais lent */
+body {
+  background:
+    linear-gradient(120deg, #061a2f, #0b3c66, #071f3f);
+  background-size: 200% 200%;
+  animation: bgShift 35s ease infinite;
+}
+
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✨ Titres plus élégants */
+h1, h2, h3 {
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+h1:hover,
+h2:hover,
+h3:hover {
+  color: var(--fx-blue);
+  text-shadow:
+    0 0 8px rgba(0,234,255,0.4),
+    0 0 18px rgba(0,234,255,0.25);
+}
+
+/* 🧊 Cartes : animation plus fluide */
+.card {
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    background 0.45s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.4),
+    0 0 20px var(--fx-cyan-soft);
+  background: rgba(255,255,255,0.09);
+}
+
+/* 🖼️ Images : effet gaming clean */
+.card img {
+  transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+.card:hover img {
+  transform: scale(1.07);
+  filter: brightness(1.05) saturate(1.05);
+}
+
+/* 🔗 Liens plus stylés */
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--fx-blue);
+}
+
+/* ✨ Apparition au scroll (plus smooth) */
+.reveal {
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+/* 📱 Mobile : animations encore plus douces */
+@media (max-width: 768px) {
+  body {
+    animation-duration: 45s;
+  }
+
+  .card:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+}OOO
