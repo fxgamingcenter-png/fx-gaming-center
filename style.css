@@ -131,3 +131,31 @@ footer {
 .center {
   font-size: 18px;
 }
+
+
+/* ===== ANIMATION COULEURS FX GAMING ===== */
+
+@keyframes fxGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fond animé du header */
+.hero {
+  background: linear-gradient(
+    270deg,
+    #0f0c29,
+    #302b63,
+    #24243e,
+    #ff0055
+  );
+  background-size: 600% 600%;
+  animation: fxGradient 12s ease infinite;
+}
