@@ -970,3 +970,40 @@ h1, h2, h3, p, span {
 .card {
   box-shadow: 0 6px 18px rgba(0,0,0,0.35) !important;
 }
+
+
+/* === FIX MOBILE & BLANC === */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: #0b1220; /* fond sombre stable */
+}
+
+/* évite les bugs de 100vh sur mobile */
+section, header, main {
+  min-height: auto;
+  height: auto;
+}
+
+/* si tu as un hero en 100vh, corrige-le */
+.hero {
+  min-height: 100vh;
+  height: auto;
+}
+
+/* empêche un pseudo-élément ou overlay de tout recouvrir */
+.hero::before,
+.hero::after {
+  pointer-events: none;
+}
+
+/* désactive les animations lourdes sur mobile */
+@media (max-width: 768px) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
