@@ -1,118 +1,98 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>FX Gaming Center</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="FX Gaming Center – Centre de jeux & arcade à Conakry. Projet en cours de développement.">
-
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FX Gaming Center – Centre de jeux</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<!-- ===== HEADER ===== -->
 <header class="header">
-  <div class="container nav">
-    <div class="logo">FX Gaming Center</div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#tarifs">Tarifs</a>
-      <a href="#galerie">Galerie</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <nav class="navbar">
+    <h1 class="logo">FX Gaming Center</h1>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#tarifs">Tarifs</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <h2>Centre de jeux & arcade</h2>
+    <p>Conakry, Guinée</p>
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
-<section class="hero">
-  <div class="hero-blur"></div>
+<!-- SERVICES -->
+<section id="services" class="section">
+  <h3>Nos services</h3>
 
-  <div class="hero-content">
-    <h1>Centre de jeux & arcade</h1>
-    <p>Conakry, Guinée</p>
-    <span>Projet en cours de développement</span>
-  </div>
-</section>
+  <div class="cards">
+    <div class="card">
+      <img src="console.jpg" alt="Consoles">
+      <h4>PS4 / PS5</h4>
+      <p>Jeux récents et multijoueur</p>
+    </div>
 
-<!-- ===== SERVICES ===== -->
-<section id="services">
-  <div class="container">
-    <h2>Nos services</h2>
+    <div class="card">
+      <img src="arcade.jpg" alt="Arcade">
+      <h4>Arcade</h4>
+      <p>Machines modernes & fun</p>
+    </div>
 
-    <div class="cards">
-
-      <div class="card">
-        <img src="arcade.jpg" alt="Arcade">
-        <h3>Arcade</h3>
-        <p>Machines modernes et rétro.</p>
-      </div>
-
-      <div class="card">
-        <img src="console.jpg" alt="Consoles">
-        <h3>Consoles</h3>
-        <p>PS4 / PS5 multijoueur.</p>
-      </div>
-
-      <div class="card">
-        <img src="kids.jpg" alt="Espace détente">
-        <h3>Espace détente</h3>
-        <p>Un espace chill pour tous.</p>
-      </div>
-
+    <div class="card">
+      <img src="kids.jpg" alt="Espace détente">
+      <h4>Espace détente</h4>
+      <p>Ambiance chill & conviviale</p>
     </div>
   </div>
 </section>
 
-<!-- ===== TARIFS ===== -->
-<section id="tarifs" class="dark">
-  <div class="container">
-    <h2>Tarifs</h2>
+<!-- TARIFS -->
+<section id="tarifs" class="section dark">
+  <h3>Tarifs</h3>
 
-    <div class="cards">
-      <div class="card simple">
-        <h3>PS4 / PS5</h3>
-        <p class="coming">À venir</p>
-      </div>
+  <div class="cards">
+    <div class="card simple">
+      <h4>PS4 / PS5</h4>
+      <p class="soon">À venir</p>
+    </div>
 
-      <div class="card simple">
-        <h3>Arcade</h3>
-        <p class="coming">À venir</p>
-      </div>
+    <div class="card simple">
+      <h4>Arcade</h4>
+      <p class="soon">À venir</p>
+    </div>
 
-      <div class="card simple">
-        <h3>Offres</h3>
-        <p class="coming">À venir</p>
-      </div>
+    <div class="card simple">
+      <h4>Offres</h4>
+      <p class="soon">À venir</p>
     </div>
   </div>
 </section>
 
-<!-- ===== GALERIE ===== -->
-<section id="galerie">
-  <div class="container">
-    <h2>Galerie</h2>
+<!-- GALERIE -->
+<section id="galerie" class="section">
+  <h3>Galerie</h3>
 
-    <div class="gallery">
-      <img src="arcade.jpg" alt="">
-      <img src="console.jpg" alt="">
-      <img src="kids.jpg" alt="">
-    </div>
+  <div class="gallery">
+    <img src="arcade.jpg" alt="Arcade">
+    <img src="console.jpg" alt="Console">
+    <img src="kids.jpg" alt="Détente">
   </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
-<section id="contact" class="dark">
-  <div class="container">
-    <h2>Contact</h2>
-    <p class="coming">Informations à venir</p>
-  </div>
+<!-- CONTACT -->
+<section id="contact" class="section dark">
+  <h3>Contact</h3>
+  <p>📍 Conakry, Guinée</p>
+  <p>📞 Informations : <strong>À venir</strong></p>
+  <p>📧 Email : <strong>À venir</strong></p>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer>
-  © 2026 FX Gaming Center – Conakry
+  <p>© 2026 FX Gaming Center</p>
 </footer>
 
 </body>
