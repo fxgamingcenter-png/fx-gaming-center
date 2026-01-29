@@ -819,3 +819,30 @@ section#tarifs {
 .tarifs * {
   background-color: transparent;
 }
+
+
+/* =========================
+   FIX TARIFS – FORCE MODE SOMBRE
+========================= */
+
+#tarifs {
+  background-color: #0b0f1a !important;
+  color: #e5e7eb !important;
+}
+
+#tarifs h2,
+#tarifs h3 {
+  color: #7dd3fc !important;
+  text-shadow: none !important;
+}
+
+#tarifs p,
+#tarifs span,
+#tarifs li {
+  color: #cbd5f5 !important;
+}
+
+/* Supprime TOUT fond blanc interne */
+#tarifs * {
+  background: transparent !important;
+}
