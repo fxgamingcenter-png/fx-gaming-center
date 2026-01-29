@@ -468,3 +468,51 @@ section {
 .hero p {
   font-size: 1rem;
 }
+
+
+/* ===== RESET PROPRE ===== */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== CONTAINER GLOBAL ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== SERVICES ===== */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Cartes */
+.card {
+  background: #0d1b2a;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Images dans cartes */
+.card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Texte */
+.card h4 {
+  font-size: 1.1rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+}
