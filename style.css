@@ -519,3 +519,110 @@ h1, h2, h3, h4, p, a {
 a:hover {
   transform: translateY(-1px);
 }
+
+
+/* =========================================
+   FX GAMING CENTER — CSS PREMIUM PATCH
+   Coller TOUT À LA FIN de style.css
+========================================= */
+
+/* ===== LECTURE & ESPACES ===== */
+body {
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: 0.3px;
+}
+
+/* Sections plus équilibrées */
+.section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/* ===== NÉON PLUS DOUX (YEUX SAFE) ===== */
+.neon-text {
+  text-shadow:
+    0 0 4px rgba(0,234,255,0.35),
+    0 0 10px rgba(0,234,255,0.18);
+  transition: color 0.35s ease, text-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.neon-text:hover {
+  color: var(--neon-blue);
+  text-shadow:
+    0 0 6px rgba(0,234,255,0.6),
+    0 0 14px rgba(0,234,255,0.35);
+  transform: translateY(-1px);
+}
+
+/* ===== CARTES — LOOK PREMIUM ===== */
+.card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+}
+
+.card:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-6px) scale(1.01);
+}
+
+.card h4 {
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.card p {
+  opacity: 0.88;
+}
+
+/* ===== IMAGES PLUS PROPRES ===== */
+.card img {
+  image-rendering: auto;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* ===== MICRO HOVER TEXTE ===== */
+.section h3,
+.card h4 {
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.section h3:hover,
+.card h4:hover {
+  transform: translateY(-2px);
+  color: var(--neon-blue);
+}
+
+/* ===== SCROLL REVEAL — FLUIDE ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== PERF (ANTI-LAG) ===== */
+* {
+  will-change: transform, opacity;
+}
+
+/* ===== MOBILE FINITIONS ===== */
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .section h3 {
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+}
