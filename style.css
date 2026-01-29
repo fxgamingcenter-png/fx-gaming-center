@@ -111,3 +111,159 @@ footer {
   opacity: 0.6;
   font-size: 13px;
 }
+
+
+/* =====================
+   STYLE GAMING CHILL
+===================== */
+
+:root {
+  --blue-dark: #061a2f;
+  --blue-main: #0b3c66;
+  --blue-soft: #0e5a8a;
+  --cyan: #00d4ff;
+  --white-soft: rgba(255,255,255,0.9);
+}
+
+/* BODY */
+body {
+  background: linear-gradient(180deg, #061a2f, #0b3c66);
+  color: var(--white-soft);
+}
+
+/* =====================
+   NAVBAR
+===================== */
+header {
+  backdrop-filter: blur(6px);
+  background: rgba(6,26,47,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+header a {
+  color: white;
+  font-weight: 500;
+}
+
+header a:hover {
+  color: var(--cyan);
+}
+
+/* =====================
+   HERO
+===================== */
+.hero {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 700;
+}
+
+.hero p {
+  opacity: 0.85;
+  margin-top: 10px;
+}
+
+/* Flou léger en haut */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.12), transparent 55%);
+  pointer-events: none;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+.section {
+  padding: 60px 6%;
+}
+
+.section h3 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 26px;
+}
+
+/* =====================
+   CARTES SERVICES
+===================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: linear-gradient(180deg, #0b3c66, #092d4a);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.card h4 {
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* =====================
+   TARIFS
+===================== */
+#tarifs {
+  text-align: center;
+}
+
+#tarifs .soon {
+  font-size: 20px;
+  opacity: 0.8;
+  margin-top: 20px;
+}
+
+/* =====================
+   CONTACT
+===================== */
+#contact {
+  text-align: center;
+}
+
+#contact p {
+  margin: 6px 0;
+  opacity: 0.85;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.6;
+}
