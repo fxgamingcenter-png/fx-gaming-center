@@ -1,119 +1,127 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>FX Gaming Center</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <meta name="description" content="FX Gaming Center – Centre de jeux & arcade à Conakry. Projet en cours de développement.">
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #0b3c8a, #062e66);
+  color: #fff;
+}
 
-  <link rel="stylesheet" href="style.css">
-</head>
+/* NAVBAR */
+.header {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px); /* FLou réduit */
+}
 
-<body>
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-<!-- ===== HEADER ===== -->
-<header class="header">
-  <div class="container nav">
-    <div class="logo">FX Gaming Center</div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#tarifs">Tarifs</a>
-      <a href="#galerie">Galerie</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
 
-<!-- ===== HERO ===== -->
-<section class="hero">
-  <div class="hero-blur"></div>
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-  <div class="hero-content">
-    <h1>Centre de jeux & arcade</h1>
-    <p>Conakry, Guinée</p>
-    <span>Projet en cours de développement</span>
-  </div>
-</section>
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
 
-<!-- ===== SERVICES ===== -->
-<section id="services">
-  <div class="container">
-    <h2>Nos services</h2>
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
 
-    <div class="cards">
+.hero p {
+  opacity: 0.8;
+}
 
-      <div class="card">
-        <img src="arcade.jpg" alt="Arcade">
-        <h3>Arcade</h3>
-        <p>Machines modernes et rétro.</p>
-      </div>
+/* SECTIONS */
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 20px;
+  text-align: center;
+}
 
-      <div class="card">
-        <img src="console.jpg" alt="Consoles">
-        <h3>Consoles</h3>
-        <p>PS4 / PS5 multijoueur.</p>
-      </div>
+.section h3 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
 
-      <div class="card">
-        <img src="kids.jpg" alt="Espace détente">
-        <h3>Espace détente</h3>
-        <p>Un espace chill pour tous.</p>
-      </div>
+.section.dark {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
 
-    </div>
-  </div>
-</section>
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
 
-<!-- ===== TARIFS ===== -->
-<section id="tarifs" class="dark">
-  <div class="container">
-    <h2>Tarifs</h2>
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 15px;
+}
 
-    <div class="cards">
-      <div class="card simple">
-        <h3>PS4 / PS5</h3>
-        <p class="coming">À venir</p>
-      </div>
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
 
-      <div class="card simple">
-        <h3>Arcade</h3>
-        <p class="coming">À venir</p>
-      </div>
+.card.simple {
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-      <div class="card simple">
-        <h3>Offres</h3>
-        <p class="coming">À venir</p>
-      </div>
-    </div>
-  </div>
-</section>
+.soon {
+  opacity: 0.7;
+  font-style: italic;
+}
 
-<!-- ===== GALERIE ===== -->
-<section id="galerie">
-  <div class="container">
-    <h2>Galerie</h2>
+/* GALERIE */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+}
 
-    <div class="gallery">
-      <img src="arcade.jpg" alt="">
-      <img src="console.jpg" alt="">
-      <img src="kids.jpg" alt="">
-    </div>
-  </div>
-</section>
+.gallery img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
 
-<!-- ===== CONTACT ===== -->
-<section id="contact" class="dark">
-  <div class="container">
-    <h2>Contact</h2>
-    <p class="coming">Informations à venir</p>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer>
-  © 2026 FX Gaming Center – Conakry
-</footer>
-
-</body>
-</html>
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.6;
+  font-size: 13px;
+}
