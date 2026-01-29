@@ -159,3 +159,142 @@ footer {
   background-size: 600% 600%;
   animation: fxGradient 12s ease infinite;
 }
+
+
+/* ===============================
+   FX GAMING — ULTIMATE VISUAL MODE
+   =============================== */
+
+/* 🌈 Gradient animé global */
+body {
+  background: linear-gradient(
+    120deg,
+    #050816,
+    #0a0f2c,
+    #120a3d,
+    #050816
+  );
+  background-size: 400% 400%;
+  animation: fxBg 20s ease infinite;
+}
+
+@keyframes fxBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🔥 HERO ULTRA */
+.hero {
+  background: linear-gradient(
+    270deg,
+    #ff0080,
+    #7928ca,
+    #2afadf,
+    #00c6ff
+  );
+  background-size: 800% 800%;
+  animation: fxHero 10s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes fxHero {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✨ Texte glow */
+.hero h1,
+.hero h2 {
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.6),
+    0 0 20px rgba(0,198,255,0.8),
+    0 0 40px rgba(0,198,255,0.6);
+}
+
+/* 💥 NAVBAR GLASS */
+.navbar {
+  background: rgba(10, 10, 40, 0.5);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ⚡ NAV LINKS */
+.navbar a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #00f2ff, #ff00aa);
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* 🧊 CARDS NEON */
+.card {
+  background: rgba(10, 10, 40, 0.8);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow:
+    0 0 20px rgba(0, 198, 255, 0.15);
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow:
+    0 0 25px rgba(0, 198, 255, 0.6),
+    0 0 50px rgba(255, 0, 170, 0.4);
+}
+
+/* 🖼️ IMAGES FLOAT */
+.card img,
+.gallery img {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card img:hover,
+.gallery img:hover {
+  transform: scale(1.08) rotate(1deg);
+  box-shadow:
+    0 0 25px rgba(0,198,255,0.6);
+}
+
+/* 🌌 SECTIONS */
+.section {
+  position: relative;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(0,198,255,0.08),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* 🚀 FOOTER FX */
+footer {
+  background: linear-gradient(
+    90deg,
+    #0a0f2c,
+    #050816
+  );
+  box-shadow: inset 0 10px 30px rgba(0,0,0,0.6);
+}
