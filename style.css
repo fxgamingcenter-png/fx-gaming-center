@@ -1,720 +1,119 @@
-/* =========================
-   FX GAMING CENTER - RESET
-   ========================= */
-
-/* RESET TOTAL */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* BASE */
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #071a2f, #0b2d4d);
-  color: #ffffff;
-  overflow-x: hidden;
-}
-
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-}
-
-/* HERO */
-.hero {
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero h2 {
-  font-size: 36px;
-}
-
-.hero p {
-  opacity: 0.8;
-  margin-top: 10px;
-}
-
-/* IMAGES */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* SECTIONS */
-section {
-  padding: 60px 40px;
-}
-
-
-/* ===== NAVBAR ===== */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 15px;
-  padding: 6px 10px;
-  border-radius: 4px;
-  transition: background 0.3s ease;
-}
-
-nav ul li a:hover {
-  background: rgba(255,255,255,0.15);
-}
-
-/* ===== SECTIONS ===== */
-section {
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 20px;
-}
-
-section h2 {
-  font-size: 26px;
-  margin-bottom: 15px;
-}
-
-section p {
-  font-size: 16px;
-  line-height: 1.6;
-  opacity: 0.9;
-}
-
-
-/* ===== GRILLE SERVICES / GALERIE ===== */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-/* ===== CARTE ===== */
-.card {
-  background: #111;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
-/* ===== IMAGE ===== */
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-}
-
-/* ===== TEXTE ===== */
-.card h3 {
-  padding: 15px 15px 5px;
-  font-size: 18px;
-}
-
-.card p {
-  padding: 0 15px 15px;
-  font-size: 14px;
-  opacity: 0.85;
-}
-
-
-/* ===== FIX GLOBAL SECTIONS ===== */
-section {
-  height: auto !important;
-  min-height: unset !important;
-  overflow: visible !important;
-  display: block !important;
-}
-
-main {
-  overflow: visible !important;
-}
-
-body {
-  overflow-y: auto !important;
-}
-
-
-/* ===== RESET GLOBAL ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-body {
-  background: linear-gradient(135deg, #0b1c3d, #0f3c6d);
-  color: #fff;
-  overflow-x: hidden;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* ===== NAVBAR ===== */
-header {
-  position: sticky;
-  top: 0;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-}
-
-nav a {
-  margin-left: 20px;
-  font-weight: bold;
-}
-
-/* ===== HERO ===== */
-.hero {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 3rem;
-}
-
-.hero p {
-  opacity: 0.8;
-}
-
-/* ===== SECTIONS ===== */
-section {
-  padding: 80px 40px;
-}
-
-section h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* ===== CARDS ===== */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: rgba(255,255,255,0.08);
-  border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-}
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card p {
-  padding: 15px;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 30px;
-  opacity: 0.6;
-}
-
-/* ===== BASE ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
-}
-
-body {
-  background: radial-gradient(circle at top, #7b5cff, #0b1c3d 60%);
-  color: #ffffff;
-  overflow-x: hidden;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* ===== NAVBAR ===== */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(10, 15, 40, 0.6);
-  backdrop-filter: blur(12px);
-  padding: 18px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header h1 {
-  font-size: 1.4rem;
-  font-weight: 700;
-}
-
-nav a {
-  margin-left: 25px;
-  opacity: 0.85;
-  transition: opacity 0.3s ease;
-}
-
-nav a:hover {
-  opacity: 1;
-}
-
-/* ===== HERO ===== */
-.hero {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px;
-}
-
-.hero h2 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 10px;
-  text-shadow: 0 0 25px rgba(140,120,255,0.5);
-}
-
-.hero p {
-  font-size: 1.1rem;
-  opacity: 0.75;
-}
-
-/* ===== SECTIONS ===== */
-section {
-  padding: 90px 60px;
-}
-
-section h3 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 50px;
-}
-
-/* ===== SERVICES GRID ===== */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-/* ===== CARD ===== */
-.card {
-  background: rgba(255,255,255,0.08);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 30px 60px rgba(120,90,255,0.35);
-}
-
-.card img {
-  height: 190px;
-  object-fit: cover;
-}
-
-.card .content {
-  padding: 18px;
-}
-
-.card h4 {
-  margin-bottom: 8px;
-}
-
-.card p {
-  font-size: 0.9rem;
-  opacity: 0.75;
-}
-
-/* ===== TARIFS ===== */
-.prices {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-}
-
-/* ===== CONTACT ===== */
-.contact {
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  padding: 40px;
-  text-align: center;
-  opacity: 0.6;
-  font-size: 0.9rem;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  header {
-    padding: 15px 25px;
-  }
-
-  .hero h2 {
-    font-size: 2.2rem;
-  }
-
-  section {
-    padding: 60px 25px;
-  }
-}
-
-
-/* ===== FIX TAILLE GLOBALE ===== */
-
-/* Container central */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Sections */
-section {
-  width: 100%;
-}
-
-/* Services grid plus compact */
-.services {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* Cartes plus petites */
-.card {
-  max-width: 340px;
-  margin: auto;
-}
-
-/* Images PAS géantes */
-.card img {
-  height: 180px;
-  object-fit: cover;
-}
-
-/* Hero moins massif */
-.hero {
-  min-height: 65vh;
-}
-
-.hero h2 {
-  font-size: 2.4rem;
-}
-
-.hero p {
-  font-size: 1rem;
-}
-
-
-/* ===== RESET PROPRE ===== */
-* {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ===== CONTAINER GLOBAL ===== */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* ===== SERVICES ===== */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-/* Cartes */
-.card {
-  background: #0d1b2a;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-/* Images dans cartes */
-.card img {
-  height: 180px;
-  object-fit: cover;
-}
-
-/* Texte */
-.card h4 {
-  font-size: 1.1rem;
-}
-
-.card p {
-  font-size: 0.95rem;
-}
-
-
-/* ===== RESET DE SÉCURITÉ ===== */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
-}
-
-/* ===== CONTENEUR PROPRE ===== */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 60px 20px;
-}
-
-/* ===== HERO (TITRE PRINCIPAL) ===== */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.hero h2 {
-  font-size: 2.4rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1rem;
-  opacity: 0.8;
-}
-
-/* ===== TITRES DES SECTIONS ===== */
-section h3 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 40px;
-}
-
-/* ===== GRILLE DES CARTES ===== */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
-
-/* ===== CARTE ===== */
-.card {
-  background: rgba(255,255,255,0.06);
-  border-radius: 16px;
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
-/* ===== IMAGES (FIX PRINCIPAL) ===== */
-.card img {
-  width: 100%;
-  height: 180px;          /* 👈 CLÉ */
-  object-fit: cover;      /* 👈 CLÉ */
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
-
-/* ===== TEXTE DES CARTES ===== */
-.card h4 {
-  font-size: 1.1rem;
-  margin-bottom: 6px;
-}
-
-.card p {
-  font-size: 0.95rem;
-  opacity: 0.8;
-}
-
-/* ===== GALERIE ===== */
-#galerie .card img {
-  height: 160px;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 25px;
-  font-size: 0.9rem;
-  opacity: 0.6;
-}
-
-/* ===== RESPONSIVE MOBILE ===== */
-@media (max-width: 600px) {
-  .hero h2 {
-    font-size: 1.8rem;
-  }
-
-  section h3 {
-    font-size: 1.5rem;
-  }
-}
-
-
-.hero {
-  position: relative;
-  min-height: 65vh; /* AVANT c'était trop grand */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: inherit;
-  filter: blur(18px); /* réduit */
-  transform: scale(1.05);
-  z-index: 0;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-}
-
-
-/* ===== FIX IMAGES PARTOUT ===== */
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* ----- CARTES SERVICES ----- */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: rgba(255,255,255,0.06);
-  border-radius: 16px;
-  overflow: hidden;
-  padding-bottom: 15px;
-}
-
-.card img {
-  width: 100%;
-  height: 180px;          /* IMPORTANT */
-  object-fit: cover;      /* 🔥 LE FIX */
-  border-radius: 12px;
-}
-
-/* ----- GALERIE ----- */
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-}
-
-.gallery img {
-  width: 100%;
-  height: 160px;          /* taille stable */
-  object-fit: cover;      /* empêche l’étirement */
-  border-radius: 14px;
-}
-
-/* ----- HERO IMAGE FLOU ----- */
-
-.hero {
-  position: relative;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-blur {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  filter: blur(25px);
-  opacity: 0.35;          /* plus discret */
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>FX Gaming Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="FX Gaming Center – Centre de jeux & arcade à Conakry. Projet en cours de développement.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container nav">
+    <div class="logo">FX Gaming Center</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-blur"></div>
+
+  <div class="hero-content">
+    <h1>Centre de jeux & arcade</h1>
+    <p>Conakry, Guinée</p>
+    <span>Projet en cours de développement</span>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="container">
+    <h2>Nos services</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="arcade.jpg" alt="Arcade">
+        <h3>Arcade</h3>
+        <p>Machines modernes et rétro.</p>
+      </div>
+
+      <div class="card">
+        <img src="console.jpg" alt="Consoles">
+        <h3>Consoles</h3>
+        <p>PS4 / PS5 multijoueur.</p>
+      </div>
+
+      <div class="card">
+        <img src="kids.jpg" alt="Espace détente">
+        <h3>Espace détente</h3>
+        <p>Un espace chill pour tous.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== TARIFS ===== -->
+<section id="tarifs" class="dark">
+  <div class="container">
+    <h2>Tarifs</h2>
+
+    <div class="cards">
+      <div class="card simple">
+        <h3>PS4 / PS5</h3>
+        <p class="coming">À venir</p>
+      </div>
+
+      <div class="card simple">
+        <h3>Arcade</h3>
+        <p class="coming">À venir</p>
+      </div>
+
+      <div class="card simple">
+        <h3>Offres</h3>
+        <p class="coming">À venir</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALERIE ===== -->
+<section id="galerie">
+  <div class="container">
+    <h2>Galerie</h2>
+
+    <div class="gallery">
+      <img src="arcade.jpg" alt="">
+      <img src="console.jpg" alt="">
+      <img src="kids.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="dark">
+  <div class="container">
+    <h2>Contact</h2>
+    <p class="coming">Informations à venir</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  © 2026 FX Gaming Center – Conakry
+</footer>
+
+</body>
+</html>
