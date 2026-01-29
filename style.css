@@ -290,3 +290,34 @@ footer {
     transform: translateY(25px);
   }
 }
+
+
+/* =====================
+   TEXTE ANIMÉ (HOVER)
+===================== */
+
+.text-anim {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  transition: color 0.4s ease;
+}
+
+.text-anim::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #00eaff, #6b7cff);
+  transition: width 0.4s ease;
+}
+
+.text-anim:hover {
+  color: #00eaff;
+}
+
+.text-anim:hover::after {
+  width: 100%;
+}
