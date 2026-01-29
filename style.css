@@ -147,3 +147,20 @@ section p {
   font-size: 14px;
   opacity: 0.85;
 }
+
+
+/* ===== FIX GLOBAL SECTIONS ===== */
+section {
+  height: auto !important;
+  min-height: unset !important;
+  overflow: visible !important;
+  display: block !important;
+}
+
+main {
+  overflow: visible !important;
+}
+
+body {
+  overflow-y: auto !important;
+}
