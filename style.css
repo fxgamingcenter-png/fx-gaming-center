@@ -267,3 +267,26 @@ footer {
   font-size: 13px;
   opacity: 0.6;
 }
+
+
+/* =====================
+   ANIMATION SCROLL
+===================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* option plus chill pour mobile */
+@media (max-width: 768px) {
+  .reveal {
+    transform: translateY(25px);
+  }
+}
