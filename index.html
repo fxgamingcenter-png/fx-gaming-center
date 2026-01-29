@@ -3,14 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>FX Gaming Center</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FX Gaming Center – Centre de jeux & arcade à Conakry. Projet en cours de développement.">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- ================= HEADER / NAV ================= -->
 <header class="top">
   <div class="blur-bar">
-    <h1>FX Gaming Center</h1>
+    <h1 class="neon-text reveal">FX Gaming Center</h1>
+
     <nav>
       <a href="#services">Services</a>
       <a href="#tarifs">Tarifs</a>
@@ -19,82 +26,80 @@
   </div>
 
   <div class="hero">
-    <h2>Centre de jeux & arcade</h2>
-    <p>Conakry, Guinée</p>
+    <h2 class="reveal">Centre de jeux & arcade</h2>
+    <p class="reveal">Conakry, Guinée</p>
   </div>
 </header>
 
+<!-- ================= OUVERTURE PROCHAINE ================= -->
+<section class="section dark reveal">
+  <h3 class="neon-text">Ouverture prochaine</h3>
+  <p class="soon">
+    FX Gaming Center est actuellement en cours de développement.<br>
+    Le projet avance étape par étape.
+  </p>
+</section>
+
+<!-- ================= SERVICES ================= -->
 <section id="services" class="section">
-  <h3>Nos services</h3>
+  <h3 class="neon-text reveal">Nos services</h3>
 
   <div class="cards">
-    <div class="card">
-      <img src="console.jpg" alt="PS4 PS5">
+    <div class="card reveal">
+      <img src="console.jpg" alt="Consoles PS4 PS5">
       <h4>PS4 / PS5</h4>
       <p>Jeux multijoueur & solo</p>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <img src="arcade.jpg" alt="Arcade">
       <h4>Arcade</h4>
-      <p>Machines fun & modernes</p>
+      <p>Machines modernes & fun</p>
     </div>
 
-    <div class="card">
-      <img src="kids.jpg" alt="Détente">
+    <div class="card reveal">
+      <img src="kids.jpg" alt="Espace détente">
       <h4>Espace détente</h4>
       <p>Ambiance chill & conviviale</p>
     </div>
   </div>
 </section>
 
-<section id="tarifs" class="section dark">
-  <h3>Tarifs</h3>
-
-  <div class="cards">
-    <div class="card simple">
-      <h4>PS4 / PS5</h4>
-      <p class="soon">À venir</p>
-    </div>
-
-    <div class="card simple">
-      <h4>Arcade</h4>
-      <p class="soon">À venir</p>
-    </div>
-
-    <div class="card simple">
-      <h4>Offres</h4>
-      <p class="soon">À venir</p>
-    </div>
-  </div>
+<!-- ================= TARIFS ================= -->
+<section id="tarifs" class="section dark reveal">
+  <h3 class="neon-text">Tarifs</h3>
+  <p class="soon big">Tarifs à venir</p>
 </section>
 
-<section id="contact" class="section">
-  <h3>Contact</h3>
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section reveal">
+  <h3 class="neon-text">Contact</h3>
   <p>📍 Conakry, Guinée</p>
   <p>📧 Email : <strong>fxgamingcenter@gmail.com</strong></p>
 </section>
 
+<!-- ================= FOOTER ================= -->
 <footer>
   <p>© 2026 FX Gaming Center</p>
 </footer>
 
+<!-- ================= SCROLL ANIMATION SCRIPT ================= -->
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+
+  const revealOnScroll = () => {
+    const windowHeight = window.innerHeight;
+    reveals.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - 80) {
+        el.classList.add("active");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+</script>
+
 </body>
 </html>
-
-
-<div class="card reveal">
-  ...
-</div>
-
-<section id="tarifs" class="section reveal">
-  ...
-</section>
-
-<section id="contact" class="section reveal">
-  ...
-</section>
-
-
-<h2 class="text-anim">Nos services</h2>
-<p class="text-anim">Centre de jeux & arcade</p>
