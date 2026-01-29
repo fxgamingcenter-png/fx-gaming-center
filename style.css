@@ -1609,3 +1609,58 @@ nav a::after {
 nav a:hover::after {
   width: 100%;
 }
+
+
+/* ===============================
+   HERO BACKGROUND UPGRADE
+================================ */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(
+    circle at top,
+    rgba(0, 255, 255, 0.25),
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+/* vague animée */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 247, 255, 0.15),
+    rgba(255, 0, 204, 0.15),
+    rgba(106, 0, 255, 0.15)
+  );
+  animation: waveMove 20s linear infinite;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+/* grain léger (cinéma / gaming) */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.08;
+  z-index: 1;
+}
+
+/* contenu au-dessus */
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes waveMove {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  100% {
+    transform: rotate(360deg) translateX(200px);
+  }
+}
