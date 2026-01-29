@@ -694,3 +694,53 @@ body {
 .card img {
   border-radius: 14px;
 }
+
+
+/* ==========================
+   HERO GAMING AVEC ÉTOILES
+   ========================== */
+
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #0b1026, #1a1f4d);
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* Étoiles */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, #ffffff55, transparent),
+    radial-gradient(1px 1px at 80% 40%, #ffffff44, transparent),
+    radial-gradient(1px 1px at 50% 70%, #ffffff33, transparent),
+    radial-gradient(1px 1px at 70% 20%, #ffffff55, transparent);
+  animation: starsMove 30s linear infinite;
+  z-index: 0;
+}
+
+/* Animation étoiles */
+@keyframes starsMove {
+  from { transform: translateY(0); }
+  to { transform: translateY(-200px); }
+}
+
+/* Contenu au-dessus des étoiles */
+.hero * {
+  position: relative;
+  z-index: 1;
+}
+
+/* TITRE PRINCIPAL */
+.hero h1 {
+  color: #eaf6ff;
+  text-shadow: 0 0 12px rgba(120, 200, 255, 0.35);
+}
+
+/* Sous-titre */
+.hero p {
+  color: #cfd8ff;
+  text-shadow: 0 0 6px rgba(120, 200, 255, 0.25);
+}
