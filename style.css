@@ -339,3 +339,92 @@ footer {
 .gallery img:hover {
   animation: neonPulse 1.6s ease-in-out infinite;
 }
+
+
+/* =========================================
+   FX GAMING — ULTIMATE PACK (3 EN 1)
+   ========================================= */
+
+/* 🌌 PARTICULES ANIMÉES (CSS ONLY) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(0,198,255,0.15) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,0,170,0.12) 1px, transparent 1px);
+  background-size: 60px 60px, 120px 120px;
+  animation: particlesMove 40s linear infinite;
+  z-index: -1;
+}
+
+@keyframes particlesMove {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 1000px 600px, -800px 400px; }
+}
+
+/* 🎬 TRANSITIONS CINÉMA ENTRE SECTIONS */
+.section {
+  transition:
+    background 0.8s ease,
+    transform 0.8s ease,
+    opacity 0.8s ease;
+}
+
+.section:hover {
+  transform: scale(1.01);
+}
+
+/* 🧠 Apparition douce */
+.section h2,
+.section p,
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: sectionReveal 1.2s ease forwards;
+}
+
+@keyframes sectionReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌗 MODE NUIT / JOUR AUTO (selon appareil) */
+@media (prefers-color-scheme: light) {
+  body {
+    background: linear-gradient(
+      120deg,
+      #f4f6ff,
+      #e6ecff,
+      #f4f6ff
+    );
+    color: #0b1220;
+  }
+
+  .card {
+    background: white;
+    box-shadow:
+      0 10px 30px rgba(0,0,0,0.15);
+  }
+
+  .navbar {
+    background: rgba(255,255,255,0.7);
+  }
+
+  footer {
+    background: #e6ecff;
+    color: #0b1220;
+  }
+}
+
+/* 🔥 MICRO-INTERACTIONS PRO */
+a,
+button {
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  letter-spacing: 0.5px;
+}
