@@ -1011,3 +1011,12 @@ section, header, main {
   }
 }
 
+
+/* 🔥 RESET TOTAL DES BORDURES & DEBUG 🔥 */
+*,
+*::before,
+*::after {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
