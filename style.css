@@ -647,3 +647,74 @@ footer {
   position: relative;
   z-index: 1;
 }
+
+
+/* ===== FIX IMAGES PARTOUT ===== */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ----- CARTES SERVICES ----- */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.06);
+  border-radius: 16px;
+  overflow: hidden;
+  padding-bottom: 15px;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;          /* IMPORTANT */
+  object-fit: cover;      /* 🔥 LE FIX */
+  border-radius: 12px;
+}
+
+/* ----- GALERIE ----- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 160px;          /* taille stable */
+  object-fit: cover;      /* empêche l’étirement */
+  border-radius: 14px;
+}
+
+/* ----- HERO IMAGE FLOU ----- */
+
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-blur {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(25px);
+  opacity: 0.35;          /* plus discret */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
