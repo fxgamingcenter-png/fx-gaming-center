@@ -1,298 +1,116 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FX Gaming Center</title>
+  <meta charset="UTF-8">
+  <title>FX Gaming Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-/* ===============================
-   RESET
-================================ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
-}
-
-/* ===============================
-   BACKGROUND ANIMÉ
-================================ */
-body {
-  min-height: 100vh;
-  background: linear-gradient(
-    -45deg,
-    #0a1aff,
-    #6a00ff,
-    #ff008c,
-    #00f7ff
-  );
-  background-size: 400% 400%;
-  animation: bgMove 12s ease infinite;
-  color: white;
-}
-
-@keyframes bgMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* ===============================
-   NAVBAR
-================================ */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  position: relative;
-}
-
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
-  height: 2px;
-  background: #00f7ff;
-  box-shadow: 0 0 10px #00f7ff;
-  transition: 0.3s;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-/* ===============================
-   HERO
-================================ */
-.hero {
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  text-shadow:
-    0 0 10px #00f7ff,
-    0 0 20px #00f7ff,
-    0 0 40px #6a00ff,
-    0 0 80px #ff00cc;
-  animation: neonPulse 2.5s infinite alternate;
-}
-
-@keyframes neonPulse {
-  from {
-    text-shadow:
-      0 0 10px #00f7ff,
-      0 0 30px #6a00ff;
-  }
-  to {
-    text-shadow:
-      0 0 20px #ff00cc,
-      0 0 60px #00f7ff;
-  }
-}
-
-.hero p {
-  margin-top: 10px;
-  opacity: 0.8;
-}
-
-/* ===============================
-   SECTIONS
-================================ */
-section {
-  padding: 80px 10%;
-  backdrop-filter: blur(16px);
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* ===============================
-   CARDS
-================================ */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.card {
-  background: rgba(255,255,255,0.08);
-  border-radius: 20px;
-  padding: 20px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0,247,255,0.3);
-  transition: 0.4s;
-}
-
-.card:hover {
-  transform: translateY(-12px) scale(1.05);
-  box-shadow: 0 0 30px #00f7ff, 0 0 60px #ff00cc;
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.25),
-    transparent
-  );
-  transform: rotate(25deg);
-  transition: 0.6s;
-}
-
-.card:hover::before {
-  left: 100%;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 14px;
-  margin-bottom: 15px;
-}
-
-.card h3 {
-  margin-bottom: 8px;
-}
-
-/* ===============================
-   TARIFS
-================================ */
-.tarifs .card {
-  font-size: 1.2rem;
-}
-
-/* ===============================
-   CONTACT
-================================ */
-.contact p {
-  text-align: center;
-  margin: 10px 0;
-}
-
-/* ===============================
-   FOOTER
-================================ */
-footer {
-  text-align: center;
-  padding: 30px;
-  opacity: 0.6;
-}
-
-/* ===============================
-   SCROLL ANIMATION
-================================ */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.8s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-</style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav>
-  <strong>FX Gaming Center</strong>
-  <div>
-    <a href="#services">Services</a>
-    <a href="#tarifs">Tarifs</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="logo">FX Gaming Center</div>
+    <nav>
+      <a href="#catalogue">Catalogue</a>
+      <a href="#services">Services</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<div class="hero">
-  <h1>Centre de jeux & arcade</h1>
-  <p>Conakry, Guinée</p>
-</div>
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <h1>Centre de jeux & arcade</h1>
+    <p class="location">Conakry, Guinée</p>
+  </section>
 
-<section id="services">
-  <h2 class="reveal">Nos services</h2>
-  <div class="cards">
-    <div class="card reveal">
-      <img src="https://images.unsplash.com/photo-1598550480917-88f4f76f90c5">
-      <h3>PS4 / PS5</h3>
-      <p>Jeux multijoueur & solo</p>
+  <!-- ================= PRESENTATION PROJET ================= -->
+  <section id="catalogue" class="section">
+    <h2>Le projet FX Gaming Center</h2>
+
+    <div class="catalogue">
+      <p>
+        <strong>FX Gaming Center</strong> est un projet de centre de jeux moderne
+        dédié aux passionnés de gaming, d’arcade et de détente.
+      </p>
+
+      <p>
+        L’objectif est de créer un espace convivial où les joueurs peuvent se
+        retrouver, jouer ensemble, se détendre et profiter d’une ambiance gaming
+        unique à Conakry.
+      </p>
+
+      <p>
+        Ce site a pour rôle de présenter le projet, informer les visiteurs sur
+        les services proposés et annoncer les nouveautés à venir avant
+        l’ouverture officielle.
+      </p>
+
+      <p class="status">
+        🚧 Projet en cours de développement – ouverture prochaine.
+      </p>
     </div>
-    <div class="card reveal">
-      <img src="https://images.unsplash.com/photo-1611605698323-b1e99cfd37ea">
-      <h3>Arcade</h3>
-      <p>Machines fun & modernes</p>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section id="services" class="section">
+    <h2>Nos services</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>PS4 / PS5</h3>
+        <p>Jeux multijoueur & solo dans un espace confortable.</p>
+      </div>
+
+      <div class="card">
+        <h3>Arcade</h3>
+        <p>Machines fun et modernes pour tous les âges.</p>
+      </div>
+
+      <div class="card">
+        <h3>Espace détente</h3>
+        <p>Ambiance chill pour se poser entre amis.</p>
+      </div>
     </div>
-    <div class="card reveal">
-      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d1">
-      <h3>Espace détente</h3>
-      <p>Ambiance chill & conviviale</p>
+  </section>
+
+  <!-- ================= TARIFS ================= -->
+  <section id="tarifs" class="section">
+    <h2>Tarifs</h2>
+
+    <div class="cards">
+      <div class="card simple">
+        <h3>PS4 / PS5</h3>
+        <p>À venir</p>
+      </div>
+
+      <div class="card simple">
+        <h3>Arcade</h3>
+        <p>À venir</p>
+      </div>
+
+      <div class="card simple">
+        <h3>Offres spéciales</h3>
+        <p>À venir</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="tarifs" class="tarifs">
-  <h2 class="reveal">Tarifs</h2>
-  <div class="cards">
-    <div class="card reveal">PS4 / PS5<br><strong>À venir</strong></div>
-    <div class="card reveal">Arcade<br><strong>À venir</strong></div>
-    <div class="card reveal">Offres<br><strong>À venir</strong></div>
-  </div>
-</section>
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="section contact">
+    <h2>Contact</h2>
+    <p>📍 Conakry, Guinée</p>
+    <p>📧 fxgamingcenter@gmail.com</p>
+  </section>
 
-<section id="contact" class="contact">
-  <h2 class="reveal">Contact</h2>
-  <p class="reveal">📍 Conakry, Guinée</p>
-  <p class="reveal">📧 fxgamingcenter@gmail.com</p>
-</section>
-
-<footer>
-  © 2026 FX Gaming Center
-</footer>
-
-<script>
-const reveals = document.querySelectorAll(".reveal");
-
-const revealOnScroll = () => {
-  const windowHeight = window.innerHeight;
-  reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < windowHeight - 80) {
-      el.classList.add("active");
-    }
-  });
-};
-
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
-</script>
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>© 2026 FX Gaming Center</p>
+  </footer>
 
 </body>
 </html>
