@@ -497,3 +497,25 @@ nav a:hover::after {
 button:active {
   transform: scale(0.97);
 }
+
+
+/* ===== ANIMATIONS DOUCES ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* hover texte léger */
+h1, h2, h3, h4, p, a {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  transform: translateY(-1px);
+}
