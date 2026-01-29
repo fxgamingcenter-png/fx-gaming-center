@@ -1,163 +1,151 @@
-/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  color: #ffffff;
-  background: linear-gradient(
-    120deg,
-    #0a1a3a,
-    #123b8c,
-    #5a2ea6
-  );
-  background-size: 300% 300%;
-  animation: bgMove 20s ease infinite;
+  background: linear-gradient(120deg, #071a3a, #0b3a6f, #4a2a8a);
+  color: white;
 }
 
-/* ===== Background animation (soft) ===== */
-@keyframes bgMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* ================= HEADER ================= */
-header {
+/* NAVBAR */
+.navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 14px 40px;
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(8px); /* flou léger */
+  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
   z-index: 100;
 }
 
-header h1 {
-  font-size: 22px;
+.navbar h1 {
   color: #7ffcff;
-  text-shadow: 0 0 8px rgba(127,252,255,0.8);
+  text-shadow: 0 0 8px rgba(127,252,255,0.6);
 }
 
-header nav a {
+.navbar a {
   margin-left: 20px;
-  color: #ffffff;
+  color: white;
   text-decoration: none;
-  font-size: 15px;
-  transition: 0.3s;
 }
 
-header nav a:hover {
+.navbar a:hover {
   color: #7ffcff;
-  text-shadow: 0 0 6px #7ffcff;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero {
-  min-height: 100vh;
-  padding-top: 120px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   text-align: center;
 }
 
+.hero-blur {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: #7ffcff;
+  filter: blur(130px);
+  opacity: 0.35;
+}
+
 .hero h2 {
-  font-size: 48px;
+  font-size: 42px;
   color: #7ffcff;
-  text-shadow:
-    0 0 10px rgba(127,252,255,0.9),
-    0 0 20px rgba(127,252,255,0.5);
+  text-shadow: 0 0 15px rgba(127,252,255,0.7);
 }
 
 .hero p {
   margin-top: 10px;
-  font-size: 16px;
   opacity: 0.9;
 }
 
-/* ================= SECTIONS ================= */
+/* OPENING */
+.opening {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.25);
+}
+
+/* SECTIONS */
 section {
   padding: 80px 8%;
 }
 
-section h3 {
+h3 {
   text-align: center;
-  font-size: 28px;
   margin-bottom: 40px;
-  color: #ffffff;
+  font-size: 26px;
 }
 
-/* ================= CARDS ================= */
+/* CARDS */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.10);
-  border-radius: 18px;
-  padding: 20px;
-  backdrop-filter: blur(6px); /* flou léger */
-  transition: 0.35s;
-  box-shadow: 0 0 0 rgba(0,0,0,0);
+  background: rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 15px;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow:
-    0 0 12px rgba(127,252,255,0.35);
+  box-shadow: 0 0 20px rgba(127,252,255,0.35);
 }
 
-/* ===== Images (FIXED – IMPORTANT) ===== */
 .card img {
   width: 100%;
   height: 170px;
   object-fit: cover;
-  border-radius: 14px;
-  margin-bottom: 15px;
+  border-radius: 12px;
 }
 
-/* ===== Card text ===== */
 .card h4 {
-  margin-bottom: 8px;
+  margin-top: 12px;
   color: #7ffcff;
 }
 
 .card p {
   font-size: 14px;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
-/* ================= TARIFS ================= */
-.tarifs .card p {
+/* TARIFS SIMPLE */
+.card.simple {
   text-align: center;
-  font-weight: bold;
-  color: #ffffff;
+  padding: 35px 15px;
 }
 
-/* ================= CONTACT ================= */
+.card.simple p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* CONTACT */
 .contact {
   text-align: center;
+  background: rgba(0,0,0,0.25);
 }
 
-.contact p {
-  margin-top: 10px;
-  opacity: 0.9;
-}
-
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 30px;
-  font-size: 13px;
+  padding: 20px;
+  font-size: 14px;
   opacity: 0.7;
 }
