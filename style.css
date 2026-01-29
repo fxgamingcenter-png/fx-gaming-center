@@ -887,3 +887,44 @@ main, section, footer, header {
   position: relative;
   z-index: 1;
 }
+
+
+/* === FIX PERFORMANCE & CONFORT VISUEL === */
+
+/* Stop les animations trop agressives */
+* {
+  animation-duration: 14s !important;
+  animation-timing-function: ease-in-out !important;
+}
+
+/* Textes : plus doux, plus lisibles */
+h1, h2, h3, p, span {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45) !important;
+  transform: none !important;
+}
+
+/* Désactive les animations continues sur le texte */
+h1, h2, h3 {
+  animation: none !important;
+}
+
+/* Effet gaming uniquement au survol (clean) */
+h1:hover, h2:hover, h3:hover {
+  text-shadow: 0 0 6px rgba(0, 180, 255, 0.45);
+  transition: text-shadow 0.4s ease;
+}
+
+/* Améliore les perfs (anti micro-freeze) */
+body {
+  will-change: auto;
+}
+
+/* Réduction du blur et glow excessif */
+* {
+  filter: none !important;
+}
+
+/* Sections sombres : stabilité visuelle */
+section, footer, header {
+  backface-visibility: hidden;
+}
