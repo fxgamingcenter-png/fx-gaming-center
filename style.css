@@ -626,3 +626,116 @@ h1, h2, h3, h4 {
     padding: 18px;
   }
 }
+
+
+/* =========================================
+   HERO CINÉMATIQUE — FX GAMING CENTER
+========================================= */
+
+/* Structure cinématique */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Fond cinématique doux */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0,234,255,0.18), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(123,124,255,0.15), transparent 45%);
+  animation: heroGlow 18s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+/* Voile sombre pour lisibilité */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(5,10,25,0.65),
+    rgba(5,10,25,0.85)
+  );
+  z-index: 1;
+}
+
+/* Contenu au-dessus */
+.hero h2,
+.hero p {
+  position: relative;
+  z-index: 2;
+}
+
+/* Animation lente du fond */
+@keyframes heroGlow {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+/* Titre cinématique */
+.hero h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  margin-bottom: 10px;
+  animation: titleFade 1.4s ease forwards;
+}
+
+/* Sous-texte */
+.hero p {
+  font-size: 16px;
+  opacity: 0.85;
+  animation: subtitleFade 1.8s ease forwards;
+}
+
+/* Entrée douce du texte */
+@keyframes titleFade {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtitleFade {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile cinématique clean */
+@media (max-width: 600px) {
+  .hero {
+    min-height: 60vh;
+    padding: 40px 15px;
+  }
+
+  .hero h2 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+}
