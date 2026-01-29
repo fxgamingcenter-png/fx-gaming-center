@@ -1158,3 +1158,173 @@ a:hover {
     transform: translateY(-5px) scale(1.01);
   }
 }
+
+
+/* ================================
+   FX GAMING CENTER — NEON UPGRADE
+   ================================ */
+
+/* Police gaming */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
+
+/* Variables couleurs */
+:root {
+  --neon: #00eaff;
+  --neon-soft: #4df3ff;
+  --bg-dark: #071b2d;
+}
+
+/* ================================
+   TITRES & LOGO (NEON)
+   ================================ */
+h1, h2, h3, .logo, header h1 {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+  color: #e9faff;
+  text-shadow:
+    0 0 6px var(--neon),
+    0 0 18px var(--neon),
+    0 0 40px rgba(0,234,255,0.6);
+  animation: neonPulse 3s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+  0% {
+    text-shadow:
+      0 0 6px var(--neon),
+      0 0 18px var(--neon),
+      0 0 35px rgba(0,234,255,0.4);
+  }
+  50% {
+    text-shadow:
+      0 0 12px var(--neon-soft),
+      0 0 30px var(--neon-soft),
+      0 0 60px rgba(77,243,255,0.9);
+  }
+  100% {
+    text-shadow:
+      0 0 6px var(--neon),
+      0 0 18px var(--neon),
+      0 0 35px rgba(0,234,255,0.4);
+  }
+}
+
+/* ================================
+   NAVBAR (HOVER NEON)
+   ================================ */
+nav a {
+  font-family: 'Orbitron', sans-serif;
+  color: #cfefff;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon), var(--neon-soft));
+  box-shadow: 0 0 12px var(--neon);
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ================================
+   SECTIONS (ANIMATION D’ENTRÉE)
+   ================================ */
+section {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   CARTES (SERVICES / TARIFS)
+   ================================ */
+.card, .service-card, .tarif-card {
+  background: linear-gradient(145deg, #0a2a44, #0e3a5d);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.35s ease;
+  box-shadow: 0 0 0 transparent;
+}
+
+.card:hover,
+.service-card:hover,
+.tarif-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 0 20px rgba(0,234,255,0.6),
+    0 0 40px rgba(0,234,255,0.4);
+}
+
+/* ================================
+   IMAGES BIEN CADRÉES
+   ================================ */
+.card img,
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.card:hover img,
+.service-card:hover img {
+  transform: scale(1.08);
+}
+
+/* ================================
+   TEXTE OUVERTURE PROCHAINE
+   ================================ */
+.ouverture,
+.ouverture-prochaine {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-shadow:
+    0 0 10px rgba(0,234,255,0.7),
+    0 0 25px rgba(0,234,255,0.5);
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+footer {
+  background: var(--bg-dark);
+  text-align: center;
+  padding: 20px;
+  font-family: 'Orbitron', sans-serif;
+  color: #9ddfff;
+}
+
+/* ================================
+   CURSEUR STYLE GAMING
+   ================================ */
+body {
+  cursor: default;
+}
+
+a:hover, button:hover {
+  cursor: pointer;
+}
