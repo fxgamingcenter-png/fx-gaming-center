@@ -265,3 +265,160 @@ footer {
   padding: 30px;
   opacity: 0.6;
 }
+
+/* ===== BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #7b5cff, #0b1c3d 60%);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== NAVBAR ===== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10, 15, 40, 0.6);
+  backdrop-filter: blur(12px);
+  padding: 18px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+nav a {
+  margin-left: 25px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-shadow: 0 0 25px rgba(140,120,255,0.5);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.75;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 90px 60px;
+}
+
+section h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+/* ===== SERVICES GRID ===== */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(120,90,255,0.35);
+}
+
+.card img {
+  height: 190px;
+  object-fit: cover;
+}
+
+.card .content {
+  padding: 18px;
+}
+
+.card h4 {
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+/* ===== TARIFS ===== */
+.prices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  padding: 40px;
+  text-align: center;
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 25px;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  section {
+    padding: 60px 25px;
+  }
+}
