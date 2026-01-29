@@ -1328,3 +1328,145 @@ body {
 a:hover, button:hover {
   cursor: pointer;
 }
+
+
+/* ================================
+   FX GAMING CENTER — LIVE NEON MODE
+   ================================ */
+
+/* Police gaming */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
+
+/* ================================
+   FOND ANIMÉ GLOBAL
+   ================================ */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(
+    120deg,
+    #051937,
+    #002b5c,
+    #004e92,
+    #0066ff
+  );
+  background-size: 400% 400%;
+  animation: bgFlow 15s ease infinite;
+}
+
+@keyframes bgFlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ================================
+   TITRES NEON ANIMÉS
+   ================================ */
+h1, h2, h3 {
+  color: #eaffff;
+  text-shadow:
+    0 0 8px #00eaff,
+    0 0 18px #00eaff,
+    0 0 40px rgba(0,234,255,0.8);
+  animation: neonText 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonText {
+  from {
+    text-shadow:
+      0 0 6px #00eaff,
+      0 0 16px #00eaff,
+      0 0 30px rgba(0,234,255,0.5);
+  }
+  to {
+    text-shadow:
+      0 0 12px #4df3ff,
+      0 0 30px #4df3ff,
+      0 0 60px rgba(77,243,255,1);
+  }
+}
+
+/* ================================
+   NAVBAR NEON
+   ================================ */
+nav {
+  backdrop-filter: blur(10px);
+  background: rgba(5, 25, 55, 0.6);
+  box-shadow: 0 0 25px rgba(0,234,255,0.4);
+}
+
+nav a {
+  color: #cfffff;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+  text-shadow:
+    0 0 10px #00eaff,
+    0 0 20px #00eaff;
+}
+
+/* ================================
+   CARTES (SERVICES / TARIFS)
+   ================================ */
+.card,
+.service-card,
+.tarif-card {
+  background: rgba(10, 35, 70, 0.75);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow:
+    0 0 18px rgba(0,234,255,0.35),
+    inset 0 0 12px rgba(0,234,255,0.25);
+  transition: all 0.4s ease;
+}
+
+.card:hover,
+.service-card:hover,
+.tarif-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow:
+    0 0 30px rgba(0,234,255,0.9),
+    0 0 60px rgba(0,234,255,0.6),
+    inset 0 0 20px rgba(0,234,255,0.4);
+}
+
+/* ================================
+   IMAGES PROPRES + NEON
+   ================================ */
+.card img,
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(0,234,255,0.5);
+  transition: transform 0.4s ease;
+}
+
+.card:hover img,
+.service-card:hover img {
+  transform: scale(1.08);
+}
+
+/* ================================
+   TEXTE "OUVERTURE PROCHAINE"
+   ================================ */
+.ouverture,
+.ouverture-prochaine {
+  color: #ffffff;
+  text-shadow:
+    0 0 10px #00eaff,
+    0 0 25px #00eaff;
+}
+
+/* ================================
+   FOOTER NEON SOFT
+   ================================ */
+footer {
+  background: rgba(5,25,55,0.8);
+  color: #bfffff;
+  box-shadow: 0 -5px 25px rgba(0,234,255,0.3);
+}
