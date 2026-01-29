@@ -622,3 +622,28 @@ footer {
     font-size: 1.5rem;
   }
 }
+
+
+.hero {
+  position: relative;
+  min-height: 65vh; /* AVANT c'était trop grand */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(18px); /* réduit */
+  transform: scale(1.05);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
