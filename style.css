@@ -784,3 +784,38 @@ body::before {
     transform: translate(-50%, -50%);
   }
 }
+
+
+/* =========================
+   SECTION TARIFS – MODE SOMBRE
+========================= */
+
+#tarifs,
+.tarifs,
+section#tarifs {
+  background: linear-gradient(
+    180deg,
+    #0b0f1a 0%,
+    #0f172a 100%
+  );
+  color: #eaeaea;
+}
+
+/* titre Tarifs */
+#tarifs h2,
+.tarifs h2 {
+  color: #7dd3fc;
+  text-shadow: none; /* pas de néon */
+}
+
+/* texte Tarifs */
+#tarifs p,
+.tarifs p {
+  color: #cbd5f5;
+}
+
+/* enlever tout fond blanc résiduel */
+#tarifs *,
+.tarifs * {
+  background-color: transparent;
+}
