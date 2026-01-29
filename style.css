@@ -739,3 +739,88 @@ h1, h2, h3, h4 {
     font-size: 14px;
   }
 }
+
+
+/* =========================================
+   FOND GAMING PREMIUM — SAFE & FLUIDE
+========================================= */
+
+/* Amélioration globale du fond */
+body {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(0,220,255,0.15), transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(120,120,255,0.18), transparent 45%),
+    linear-gradient(180deg, #071a3a, #041024);
+  background-attachment: fixed;
+}
+
+/* Couches animées abstraites */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Formes néon lentes */
+body::before {
+  background:
+    radial-gradient(circle, rgba(0,255,255,0.12), transparent 60%);
+  animation: floatNeon 28s linear infinite;
+}
+
+/* Halo doux secondaire */
+body::after {
+  background:
+    radial-gradient(circle, rgba(140,100,255,0.10), transparent 65%);
+  animation: floatNeonReverse 36s linear infinite;
+}
+
+/* Animations très lentes */
+@keyframes floatNeon {
+  0%   { transform: translate(0,0) scale(1); }
+  50%  { transform: translate(8%, -6%) scale(1.05); }
+  100% { transform: translate(0,0) scale(1); }
+}
+
+@keyframes floatNeonReverse {
+  0%   { transform: translate(0,0) scale(1); }
+  50%  { transform: translate(-6%, 8%) scale(1.04); }
+  100% { transform: translate(0,0) scale(1); }
+}
+
+/* Sections effet carte premium */
+section,
+.card,
+.service-card,
+.tarif-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+/* Glow léger au hover */
+.card:hover,
+.service-card:hover,
+.tarif-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 25px rgba(0,220,255,0.25),
+    0 30px 70px rgba(0,0,0,0.45);
+}
+
+/* Texte légèrement lumineux */
+h1, h2, h3 {
+  text-shadow: 0 0 12px rgba(0,200,255,0.15);
+}
+
+/* Mobile : animations encore plus légères */
+@media (max-width: 600px) {
+  body::before,
+  body::after {
+    animation-duration: 45s;
+  }
+}
