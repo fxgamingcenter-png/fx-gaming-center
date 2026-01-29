@@ -617,3 +617,33 @@ footer {
     inset 0 20px 40px rgba(0,0,0,0.9),
     0 -10px 30px rgba(255,0,85,0.4);
 }
+
+
+/* ================================
+   FIX STRUCTURE & ESPACES
+   ================================ */
+
+/* Chaque section doit respirer */
+.section {
+  position: relative;
+  z-index: 2;
+  padding: 80px 20px;
+  background: #f7f8fc;
+}
+
+/* Sections sombres séparées clairement */
+.section.dark {
+  background: linear-gradient(180deg, #050816, #0b1220);
+  color: #fff;
+}
+
+/* Stopper l’aura démon dans les zones claires */
+.section,
+footer {
+  isolation: isolate;
+}
+
+/* Empêcher le fond animé de "remonter" */
+body {
+  overflow-x: hidden;
+}
