@@ -928,3 +928,45 @@ body {
 section, footer, header {
   backface-visibility: hidden;
 }
+
+
+/* ===================================
+   STOP TOTAL DES ANIMATIONS (ANTI-LAG)
+   =================================== */
+
+/* Désactive ABSOLUMENT toutes les animations et transitions */
+*,
+*::before,
+*::after {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+/* Désactive les fonds animés */
+body::before,
+body::after,
+.hero::before,
+.hero::after,
+.section::before,
+.section::after {
+  animation: none !important;
+  background-attachment: scroll !important;
+}
+
+/* Fond sombre statique (gaming clean) */
+body {
+  background-color: #0b0f1a !important;
+  background-image: none !important;
+}
+
+/* Texte ultra stable */
+h1, h2, h3, p, span {
+  text-shadow: none !important;
+}
+
+/* Cartes stables */
+.card {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35) !important;
+}
