@@ -1050,3 +1050,111 @@ a:hover {
     transform: translateY(-4px) scale(1.01);
   }
 }OOO
+
+
+/* =========================================
+   FX GAMING CENTER — ULTRA BOOST CSS
+========================================= */
+
+/* 🎨 Palette FX */
+:root {
+  --fx-blue: #00eaff;
+  --fx-purple: #7b7cff;
+  --fx-pink: #ff4fd8;
+}
+
+/* 🌌 Fond vivant animé */
+body {
+  background: linear-gradient(120deg, #061a2f, #0b3c66, #071f3f);
+  background-size: 300% 300%;
+  animation: bgMove 40s ease infinite;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✨ Lumière qui suit la souris */
+#fx-light {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(0,234,255,0.18), transparent 60%);
+  mix-blend-mode: screen;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+/* ✨ Titres */
+h1, h2, h3 {
+  transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s ease;
+}
+
+h1:hover,
+h2:hover,
+h3:hover {
+  color: var(--fx-blue);
+  text-shadow:
+    0 0 10px rgba(0,234,255,0.5),
+    0 0 25px rgba(0,234,255,0.35);
+  transform: translateY(-2px);
+}
+
+/* 🧊 Cartes ultra stylées */
+.card {
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  background: rgba(255,255,255,0.1);
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.45),
+    0 0 30px rgba(0,234,255,0.25);
+}
+
+/* 🖼️ Images */
+.card img {
+  transition: transform 0.8s ease, filter 0.8s ease;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.1) saturate(1.1);
+}
+
+/* 🔗 Liens */
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--fx-blue);
+}
+
+/* ✨ Apparition au scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 📱 Mobile SAFE */
+@media (max-width: 768px) {
+  body {
+    animation-duration: 60s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px) scale(1.01);
+  }
+}
