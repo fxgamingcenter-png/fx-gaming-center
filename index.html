@@ -6,191 +6,160 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* ================= RESET ================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", system-ui, sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI, system-ui, sans-serif;
 }
 
-body {
-  min-height: 100vh;
-  color: #fff;
-  background: linear-gradient(120deg,
-    rgba(10,22,51,0.92),
-    rgba(43,10,69,0.92)
-  );
-  overflow-x: hidden;
+body{
+  background:linear-gradient(120deg,#0a1633,#2b0a45);
+  color:#fff;
+  overflow-x:hidden;
 }
 
-/* ================= STARS ================= */
-#stars-bg {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
+/* ===== BACKGROUND STARS ===== */
+#stars-bg{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
 }
 
-/* ================= LAYOUT ================= */
-header, section, footer {
-  position: relative;
-  z-index: 1;
+header,section,footer{position:relative;z-index:1}
+
+/* ===== HEADER ===== */
+header{
+  padding:20px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header h1{
+  color:#5ffcff;
+  text-shadow:0 0 12px rgba(95,252,255,.7);
+}
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#ddd;
+}
+nav a:hover{color:#5ffcff}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:80vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  backdrop-filter:blur(10px);
+  background:rgba(0,0,0,.2);
+  z-index:-1;
+}
+.hero h2{
+  font-size:2.6rem;
+  color:#5ffcff;
+  text-shadow:0 0 25px rgba(95,252,255,.9);
+}
+.hero p{margin-top:10px;opacity:.9}
+.badge{
+  margin-top:25px;
+  padding:10px 22px;
+  border-radius:30px;
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(6px);
 }
 
-header {
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* ===== SECTIONS ===== */
+section{
+  padding:80px 40px;
+  text-align:center;
+}
+section h3{
+  font-size:1.9rem;
+  margin-bottom:30px;
+  color:#5ffcff;
 }
 
-header h1 {
-  font-size: 1.2rem;
-  color: #5ffcff;
-  text-shadow: 0 0 10px rgba(95,252,255,.6);
+/* ===== CARDS ===== */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+.card{
+  background:rgba(255,255,255,.12);
+  border-radius:18px;
+  padding:20px;
+  backdrop-filter:blur(8px);
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 30px rgba(95,252,255,.3);
+}
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-bottom:15px;
+}
+.card h4{
+  color:#5ffcff;
+  margin-bottom:8px;
 }
 
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #ddd;
-  transition: .3s;
-}
-nav a:hover {
-  color: #5ffcff;
-}
-
-/* ================= HERO ================= */
-.hero {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px;
+/* ===== PROJECT ===== */
+.projet{
+  max-width:900px;
+  margin:auto;
+  background:rgba(255,255,255,.12);
+  padding:30px;
+  border-radius:20px;
+  backdrop-filter:blur(8px);
+  line-height:1.7;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  backdrop-filter: blur(10px);
-  background: rgba(0,0,0,.15);
-  z-index: -1;
+/* ===== TARIFS ===== */
+.tarif{
+  max-width:700px;
+  margin:auto;
+  background:rgba(255,255,255,.12);
+  padding:30px;
+  border-radius:20px;
+  backdrop-filter:blur(8px);
 }
 
-.hero h2 {
-  font-size: 2.5rem;
-  color: #5ffcff;
-  text-shadow: 0 0 20px rgba(95,252,255,.8);
-  animation: glow 3s infinite alternate;
+/* ===== SUPPORT ===== */
+.soutenir a{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 30px;
+  border-radius:30px;
+  background:#25D366;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+.soutenir a:hover{
+  box-shadow:0 0 25px rgba(37,211,102,.7);
+  transform:scale(1.05);
 }
 
-.hero p {
-  margin-top: 10px;
-  opacity: .9;
-}
-
-.hero .badge {
-  margin-top: 25px;
-  padding: 10px 22px;
-  border-radius: 30px;
-  background: rgba(255,255,255,.15);
-  backdrop-filter: blur(6px);
-}
-
-/* ================= SECTIONS ================= */
-section {
-  padding: 80px 40px;
-  text-align: center;
-}
-
-section h3 {
-  font-size: 1.8rem;
-  margin-bottom: 30px;
-  color: #5ffcff;
-}
-
-/* ================= CARDS ================= */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 25px;
-}
-
-.card {
-  background: rgba(255,255,255,.12);
-  border-radius: 18px;
-  padding: 20px;
-  backdrop-filter: blur(8px);
-  transition: .3s;
-}
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(95,252,255,.25);
-}
-.card img {
-  width: 100%;
-  border-radius: 14px;
-  margin-bottom: 12px;
-}
-.card h4 {
-  margin-bottom: 8px;
-  color: #5ffcff;
-}
-
-/* ================= PROJET ================= */
-.projet {
-  max-width: 900px;
-  margin: auto;
-  line-height: 1.6;
-  background: rgba(255,255,255,.10);
-  padding: 30px;
-  border-radius: 20px;
-  backdrop-filter: blur(8px);
-}
-
-/* ================= TARIFS ================= */
-.tarif {
-  background: rgba(255,255,255,.12);
-  border-radius: 20px;
-  padding: 30px;
-  backdrop-filter: blur(8px);
-}
-.tarif p {
-  opacity: .85;
-}
-
-/* ================= SOUTIEN ================= */
-.soutenir a {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 14px 28px;
-  border-radius: 30px;
-  background: #25D366;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  transition: .3s;
-}
-.soutenir a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(37,211,102,.6);
-}
-
-/* ================= FOOTER ================= */
-footer {
-  padding: 30px;
-  text-align: center;
-  opacity: .7;
-}
-
-/* ================= ANIM ================= */
-@keyframes glow {
-  from { text-shadow: 0 0 10px rgba(95,252,255,.5); }
-  to   { text-shadow: 0 0 25px rgba(95,252,255,1); }
+/* ===== FOOTER ===== */
+footer{
+  padding:30px;
+  text-align:center;
+  opacity:.7;
 }
 </style>
 </head>
@@ -216,51 +185,67 @@ footer {
 <section id="services">
   <h3>Nos services</h3>
   <div class="cards">
+
     <div class="card">
       <img src="console.jpg" alt="PS4 PS5">
       <h4>PS4 / PS5</h4>
-      <p>Jeux multijoueurs & solo dans un espace confortable.</p>
+      <p>
+        Consoles dernière génération avec des jeux populaires
+        (FIFA, Call of Duty, GTA, Fortnite…).  
+        Idéal pour jouer entre amis ou en solo dans un cadre confortable.
+      </p>
     </div>
+
     <div class="card">
       <img src="arcade.jpg" alt="Arcade">
       <h4>Arcade</h4>
-      <p>Machines fun et modernes pour tous les âges.</p>
+      <p>
+        Machines d’arcade modernes et rétro pour retrouver
+        le plaisir des jeux classiques et découvrir de nouvelles expériences.
+      </p>
     </div>
+
     <div class="card">
       <img src="kids.jpg" alt="Espace détente">
       <h4>Espace détente</h4>
-      <p>Ambiance chill et conviviale pour se poser.</p>
+      <p>
+        Un espace convivial et sécurisé pour se détendre,
+        regarder, discuter et profiter d’une ambiance chill.
+      </p>
     </div>
+
   </div>
 </section>
 
 <section id="projet">
   <h3>Le projet FX Gaming Center</h3>
   <div class="projet">
-    FX Gaming Center est un projet de centre de jeux vidéo et d’arcade moderne situé à Conakry.
-    L’objectif est de créer un espace sécurisé, accessible et fun pour les passionnés de gaming,
-    les familles et les jeunes.  
+    FX Gaming Center est un projet de centre de jeux vidéo et d’arcade
+    moderne situé à Conakry.  
     <br><br>
-    Le site sert à présenter le concept, informer la communauté et préparer l’ouverture officielle
-    du centre avec des services innovants et une ambiance unique.
+    L’objectif est de créer un lieu sécurisé, accessible et amusant
+    pour les passionnés de gaming, les enfants, les familles et les groupes d’amis.
+    <br><br>
+    Ce site sert à présenter le concept, informer la communauté,
+    annoncer les nouveautés et préparer l’ouverture officielle du centre.
   </div>
 </section>
 
 <section id="tarifs">
   <h3>Tarifs</h3>
   <div class="tarif">
-    <p>
-      Les tarifs définitifs seront annoncés à l’ouverture.<br>
-      L’objectif est de proposer des prix accessibles, adaptés aux joueurs réguliers,
-      aux groupes et aux enfants, avec des offres spéciales et abonnements.
-    </p>
+    Les tarifs seront annoncés prochainement.  
+    L’idée est de proposer des prix abordables,
+    avec des formules adaptées aux joueurs réguliers,
+    aux groupes et aux enfants.
   </div>
 </section>
 
 <section id="soutenir" class="soutenir">
   <h3>Soutenir le projet</h3>
   <p>
-    Tu veux soutenir FX Gaming Center, proposer un partenariat ou simplement nous encourager ?
+    Tu veux soutenir FX Gaming Center, proposer un partenariat
+    ou simplement avoir plus d’informations ?
   </p>
   <a href="https://wa.me/224627543486" target="_blank">
     💬 Contacter sur WhatsApp
@@ -271,35 +256,24 @@ footer {
   © 2026 FX Gaming Center – Conakry
 </footer>
 
-<!-- ================= STARS JS ================= -->
 <script>
-const canvas = document.createElement("canvas");
-canvas.id = "stars-bg";
+const canvas=document.createElement("canvas");
+canvas.id="stars-bg";
 document.body.prepend(canvas);
-const ctx = canvas.getContext("2d");
-
-let stars = [];
-function resize(){
-  canvas.width = innerWidth;
-  canvas.height = innerHeight;
-}
-addEventListener("resize", resize);
-resize();
-
-for(let i=0;i<100;i++){
-  stars.push({
-    x: Math.random()*canvas.width,
-    y: Math.random()*canvas.height,
-    r: Math.random()*1.5+0.5,
-    vx:(Math.random()-.5)*0.25,
-    vy:(Math.random()-.5)*0.25
-  });
-}
-
-function anim(){
+const ctx=canvas.getContext("2d");
+function resize(){canvas.width=innerWidth;canvas.height=innerHeight}
+addEventListener("resize",resize);resize();
+let stars=[...Array(120)].map(()=>({
+  x:Math.random()*canvas.width,
+  y:Math.random()*canvas.height,
+  r:Math.random()*1.5+0.5,
+  vx:(Math.random()-.5)*0.3,
+  vy:(Math.random()-.5)*0.3
+}));
+(function anim(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
   ctx.fillStyle="white";
-  for(let s of stars){
+  stars.forEach(s=>{
     s.x+=s.vx; s.y+=s.vy;
     if(s.x<0)s.x=canvas.width;
     if(s.x>canvas.width)s.x=0;
@@ -308,10 +282,9 @@ function anim(){
     ctx.beginPath();
     ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
     ctx.fill();
-  }
+  });
   requestAnimationFrame(anim);
-}
-anim();
+})();
 </script>
 
 </body>
