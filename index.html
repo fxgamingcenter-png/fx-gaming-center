@@ -115,23 +115,16 @@ section{
   line-height:1.6;
 }
 
-/* ===== SOUTENIR ===== */
+/* ===== BOUTON SOUTENIR ===== */
 .support-btn{
+  display:inline-block;
   margin-top:20px;
   padding:12px 26px;
-  border:none;
   border-radius:30px;
   background:#4dfcff;
   color:#000;
   font-weight:700;
-  cursor:pointer;
-}
-.support-msg{
-  display:none;
-  margin-top:20px;
-  padding:18px;
-  border-radius:16px;
-  background:rgba(77,252,255,.15);
+  text-decoration:none;
 }
 
 /* ===== FOOTER ===== */
@@ -152,8 +145,8 @@ footer{
   <nav>
     <a href="#services">Services</a>
     <a href="#projet">Projet</a>
-    <a href="#tarifs">Tarifs</a>
     <a href="#soutenir">Soutenir</a>
+    <a href="#tarifs">Tarifs</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -168,17 +161,17 @@ footer{
   <h3 class="section-title">Nos services</h3>
   <div class="cards">
     <div class="card">
-      <img src="console.jpg" alt="PS4 PS5">
+      <img src="console.jpg">
       <h4>PS4 / PS5</h4>
       <p>Jeux modernes, multijoueur, FIFA, GTA, Call of Duty.</p>
     </div>
     <div class="card">
-      <img src="arcade.jpg" alt="Arcade">
+      <img src="arcade.jpg">
       <h4>Arcade</h4>
       <p>Machines rétro et modernes pour tous les âges.</p>
     </div>
     <div class="card">
-      <img src="kids.jpg" alt="Espace détente">
+      <img src="kids.jpg">
       <h4>Espace détente</h4>
       <p>Ambiance conviviale, sécurisée et relax.</p>
     </div>
@@ -189,30 +182,31 @@ footer{
   <h3 class="section-title">Le projet FX Gaming Center</h3>
   <div class="big-box">
     FX Gaming Center est un projet de centre de jeux vidéo et d’arcade moderne à Conakry.<br><br>
-    L’objectif est de créer un espace sécurisé, accessible et fun pour les jeunes, les familles
-    et les passionnés de gaming.<br><br>
+    L’objectif est de créer un espace sécurisé, accessible et fun pour les jeunes,
+    les familles et les passionnés de gaming.<br><br>
     Ce site sert à présenter le concept, informer la communauté et préparer l’ouverture officielle.
-  </div>
-</section>
-
-<section id="tarifs">
-  <h3 class="section-title">Tarifs</h3>
-  <div class="big-box">
-    💡 Les tarifs du FX Gaming Center seront annoncés prochainement.<br><br>
-    Ils dépendront des consoles, du temps de jeu et des formules proposées
-    (solo, multijoueur, arcade, enfants).
   </div>
 </section>
 
 <section id="soutenir">
   <h3 class="section-title">💚 Soutenir le projet</h3>
   <div class="big-box">
-    Soutenir FX Gaming Center, c’est encourager la création d’un espace gaming moderne,
-    accessible et sécurisé à Conakry.
-    <button class="support-btn" id="supportBtn">Soutenir le projet</button>
-    <div class="support-msg" id="supportMsg">
-      🙏 Merci pour ton soutien ! Chaque encouragement aide à faire avancer le projet FX Gaming Center.
-    </div>
+    Soutenir FX Gaming Center, c’est encourager la création d’un espace gaming moderne
+    et accessible à Conakry.<br><br>
+
+    <a class="support-btn"
+       href="https://wa.me/224627543486"
+       target="_blank">
+       Soutenir le projet via WhatsApp
+    </a>
+  </div>
+</section>
+
+<section id="tarifs">
+  <h3 class="section-title">Tarifs</h3>
+  <div class="big-box">
+    💡 Les tarifs seront annoncés prochainement selon les consoles,
+    le temps de jeu et les formules proposées.
   </div>
 </section>
 
@@ -231,7 +225,6 @@ footer{
 const c=document.getElementById("stars-bg"),ctx=c.getContext("2d");
 function resize(){c.width=innerWidth;c.height=innerHeight}
 addEventListener("resize",resize);resize();
-
 let stars=[...Array(140)].map(()=>({
  x:Math.random()*c.width,
  y:Math.random()*c.height,
@@ -239,7 +232,6 @@ let stars=[...Array(140)].map(()=>({
  vx:(Math.random()-.5)*.3,
  vy:(Math.random()-.5)*.3
 }));
-
 (function anim(){
  ctx.clearRect(0,0,c.width,c.height);
  stars.forEach(s=>{
@@ -247,16 +239,10 @@ let stars=[...Array(140)].map(()=>({
   if(s.x<0)s.x=c.width;if(s.x>c.width)s.x=0;
   if(s.y<0)s.y=c.height;if(s.y>c.height)s.y=0;
   ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
-  ctx.fillStyle="rgba(255,255,255,.8)";
-  ctx.fill();
+  ctx.fillStyle="rgba(255,255,255,.8)";ctx.fill();
  });
  requestAnimationFrame(anim);
 })();
-
-/* ===== SOUTENIR ===== */
-document.getElementById("supportBtn").onclick=()=>{
- document.getElementById("supportMsg").style.display="block";
-};
 </script>
 
 </body>
