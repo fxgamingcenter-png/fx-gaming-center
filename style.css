@@ -428,3 +428,157 @@ header, section, footer {
   position: relative;
   z-index: 2;
 }
+
+
+
+/* =========================
+   FX GAMING CENTER – CSS BOOST
+   À COLLER TOUT EN BAS
+========================= */
+
+/* Variables couleurs (facile à modifier plus tard) */
+:root {
+  --neon-blue: #4fd1ff;
+  --neon-purple: #9b7bff;
+  --bg-dark: #0b1020;
+  --glass: rgba(255, 255, 255, 0.08);
+  --blur-soft: blur(12px);
+}
+
+/* Transitions globales */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Titres néon améliorés */
+h1, h2, h3 {
+  color: var(--neon-blue);
+  text-shadow:
+    0 0 8px rgba(79, 209, 255, 0.6),
+    0 0 18px rgba(155, 123, 255, 0.4);
+}
+
+/* HERO – profondeur + glow */
+.hero {
+  position: relative;
+  background: radial-gradient(
+    circle at top,
+    #12205a,
+    #070b1a 70%
+  );
+  overflow: hidden;
+}
+
+/* Flou discret (amélioré mais léger) */
+.hero-blur {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(79, 209, 255, 0.12),
+    rgba(155, 123, 255, 0.12)
+  );
+  filter: var(--blur-soft);
+  pointer-events: none;
+}
+
+/* Bouton principal */
+button,
+.btn {
+  background: linear-gradient(
+    135deg,
+    var(--neon-blue),
+    var(--neon-purple)
+  );
+  border: none;
+  border-radius: 999px;
+  padding: 12px 26px;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 0 20px rgba(79, 209, 255, 0.4);
+}
+
+button:hover,
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 25px rgba(79, 209, 255, 0.7),
+    0 0 40px rgba(155, 123, 255, 0.5);
+}
+
+/* Cartes (services, tarifs, projet…) */
+.card {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.08),
+    0 10px 30px rgba(0,0,0,0.35);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 0 25px rgba(79, 209, 255, 0.35),
+    0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Images dans les cartes */
+.card img {
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.card:hover img {
+  filter: brightness(1.1) saturate(1.15);
+}
+
+/* Navigation */
+nav a {
+  position: relative;
+  color: #dbeafe;
+  font-weight: 500;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--neon-blue),
+    var(--neon-purple)
+  );
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Section Projet */
+#projet {
+  background: linear-gradient(
+    180deg,
+    rgba(11,16,32,0.6),
+    rgba(11,16,32,0.9)
+  );
+}
+
+/* Section Contact */
+#contact {
+  background: linear-gradient(
+    135deg,
+    rgba(155,123,255,0.15),
+    rgba(79,209,255,0.15)
+  );
+}
+
+/* Footer clean */
+footer {
+  opacity: 0.85;
+  font-size: 0.9rem;
+}
