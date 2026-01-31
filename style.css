@@ -299,3 +299,70 @@ nav a:hover {
   }
 }
 
+
+
+/* ===== COOL MODE : COULEURS & ANIMATIONS ===== */
+
+/* Dégradé vivant mais lent (fond) */
+body {
+  background-size: 200% 200%;
+  animation: bgFlow 18s ease infinite;
+}
+
+@keyframes bgFlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Titres : néon doux, moins fatigant */
+h1, h2, h3, h4 {
+  text-shadow:
+    0 0 4px rgba(77,225,255,0.5),
+    0 0 10px rgba(122,92,255,0.35);
+}
+
+/* Hover texte (smooth) */
+nav a:hover {
+  color: #7a5cff;
+  text-shadow: 0 0 10px rgba(122,92,255,0.7);
+}
+
+/* Cartes : glow chill */
+.card {
+  border: 1px solid rgba(122,92,255,0.15);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 18px rgba(77,225,255,0.35),
+    0 0 30px rgba(122,92,255,0.25);
+}
+
+/* Images : un peu plus clean */
+.card img {
+  filter: saturate(1.05) contrast(1.05);
+}
+
+/* Bouton Soutenir : vibe premium */
+.soutenir-btn {
+  background: linear-gradient(90deg, #4de1ff, #7a5cff);
+  animation: pulseSoft 3.5s ease-in-out infinite;
+}
+
+@keyframes pulseSoft {
+  0%   { box-shadow: 0 0 12px rgba(77,225,255,0.4); }
+  50%  { box-shadow: 0 0 22px rgba(122,92,255,0.6); }
+  100% { box-shadow: 0 0 12px rgba(77,225,255,0.4); }
+}
+
+/* Mobile : on calme encore plus */
+@media (max-width: 600px) {
+  body {
+    animation: none;
+  }
+  .card:hover {
+    transform: none;
+  }
+}
