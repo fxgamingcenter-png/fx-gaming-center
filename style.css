@@ -582,3 +582,9 @@ footer {
   opacity: 0.85;
   font-size: 0.9rem;
 }
+
+
+/* Corrige le scroll avec header fixe */
+#soutenir{
+  scroll-margin-top:120px;
+}
