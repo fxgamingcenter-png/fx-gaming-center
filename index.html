@@ -7,75 +7,139 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{background:#050b1e;color:#fff;overflow-x:hidden}
 
-/* ÉTOILES */
-#stars-bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+body{
+  background:#050b1e;
+  color:#fff;
+  overflow-x:hidden;
+}
 
-/* NAV */
+/* ===== ÉTOILES ===== */
+#stars-bg{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+}
+
+/* ===== NAV ===== */
 header{
-  position:fixed;top:0;left:0;width:100%;
-  padding:15px 40px;display:flex;justify-content:space-between;align-items:center;
-  background:rgba(5,15,40,.6);backdrop-filter:blur(10px);z-index:10
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(5,15,40,.6);
+  backdrop-filter:blur(12px);
+  z-index:10;
 }
 header h1{color:#4dfcff}
-nav a{color:white;margin-left:20px;text-decoration:none;font-weight:600}
+nav a{
+  color:#fff;
+  margin-left:20px;
+  text-decoration:none;
+  font-weight:600;
+}
 nav a:hover{color:#4dfcff}
 
-/* HERO */
+/* ===== HERO ===== */
 .hero{
-  min-height:100vh;display:flex;flex-direction:column;
-  justify-content:center;align-items:center;text-align:center;z-index:2;position:relative
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  z-index:2;
+  position:relative;
 }
-.hero h2{font-size:42px;color:#4dfcff;text-shadow:0 0 25px rgba(77,252,255,.8)}
+.hero h2{
+  font-size:42px;
+  color:#4dfcff;
+  text-shadow:0 0 25px rgba(77,252,255,.8);
+}
 .hero p{margin-top:10px;opacity:.9}
-.hero .btn{margin-top:25px;padding:12px 25px;border-radius:30px;background:rgba(255,255,255,.15)}
+.hero .btn{
+  margin-top:25px;
+  padding:12px 28px;
+  border-radius:30px;
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(8px);
+}
 
-/* SECTIONS */
-section{padding:90px 10%;position:relative;z-index:2}
-.section-title{text-align:center;color:#4dfcff;margin-bottom:40px;font-size:28px}
+/* ===== SECTIONS ===== */
+section{
+  padding:90px 10%;
+  position:relative;
+  z-index:2;
+}
+.section-title{
+  text-align:center;
+  color:#4dfcff;
+  font-size:28px;
+  margin-bottom:40px;
+}
 
-/* CARDS */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+/* ===== CARDS ===== */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
 .card{
-  background:rgba(255,255,255,.08);border-radius:16px;padding:20px;
-  backdrop-filter:blur(10px);transition:.3s
+  background:rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:22px;
+  backdrop-filter:blur(12px);
+  transition:.3s;
 }
-.card:hover{transform:translateY(-6px);box-shadow:0 0 25px rgba(77,252,255,.4)}
-.card img{width:100%;border-radius:12px;margin-bottom:15px}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 25px rgba(77,252,255,.4);
+}
+.card img{
+  width:100%;
+  border-radius:12px;
+  margin-bottom:15px;
+}
 
-/* GRANDS BLOCS */
+/* ===== GRAND CADRE ===== */
 .big-box{
+  max-width:900px;
+  margin:0 auto;
   background:rgba(255,255,255,.1);
-  padding:30px;border-radius:20px;line-height:1.6;
-  box-shadow:0 0 35px rgba(77,252,255,.25)
+  border-radius:22px;
+  padding:30px;
+  line-height:1.6;
 }
 
-/* BOUTON SOUTIEN */
+/* ===== SOUTENIR ===== */
 .support-btn{
   margin-top:20px;
-  padding:12px 22px;
-  border-radius:30px;
+  padding:12px 26px;
   border:none;
+  border-radius:30px;
   background:#4dfcff;
   color:#000;
-  font-weight:bold;
+  font-weight:700;
   cursor:pointer;
 }
-.support-btn:hover{box-shadow:0 0 20px rgba(77,252,255,.8)}
-
 .support-msg{
-  margin-top:20px;
   display:none;
-  opacity:0;
-  transition:.4s;
+  margin-top:20px;
+  padding:18px;
+  border-radius:16px;
+  background:rgba(77,252,255,.15);
 }
 
-/* CONTACT */
-.contact{text-align:center}
-
-/* FOOTER */
-footer{padding:20px;text-align:center;opacity:.6}
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:25px;
+  opacity:.6;
+}
 </style>
 </head>
 
@@ -89,7 +153,6 @@ footer{padding:20px;text-align:center;opacity:.6}
     <a href="#services">Services</a>
     <a href="#projet">Projet</a>
     <a href="#soutenir">Soutenir</a>
-    <a href="#tarifs">Tarifs</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -106,17 +169,17 @@ footer{padding:20px;text-align:center;opacity:.6}
     <div class="card">
       <img src="console.jpg">
       <h4>PS4 / PS5</h4>
-      <p>FIFA, GTA, Call of Duty, multijoueur.</p>
+      <p>Jeux modernes, multijoueur, FIFA, GTA, Call of Duty.</p>
     </div>
     <div class="card">
       <img src="arcade.jpg">
       <h4>Arcade</h4>
-      <p>Machines rétro et modernes.</p>
+      <p>Machines rétro et modernes pour tous les âges.</p>
     </div>
     <div class="card">
       <img src="kids.jpg">
       <h4>Espace détente</h4>
-      <p>Convivial, sécurisé et relax.</p>
+      <p>Ambiance conviviale, sécurisée et relax.</p>
     </div>
   </div>
 </section>
@@ -124,22 +187,19 @@ footer{padding:20px;text-align:center;opacity:.6}
 <section id="projet">
   <h3 class="section-title">Le projet FX Gaming Center</h3>
   <div class="big-box">
-    FX Gaming Center est un projet de centre de jeux vidéo et d’arcade moderne à Conakry.
-    <br><br>
-    L’objectif est de créer un espace sécurisé, accessible et fun pour les jeunes,
-    les familles et les passionnés de gaming.
+    FX Gaming Center est un projet de centre de jeux vidéo et d’arcade moderne à Conakry.<br><br>
+    L’objectif est de créer un espace sécurisé, accessible et fun pour les jeunes, les familles
+    et les passionnés de gaming.<br><br>
+    Ce site sert à présenter le concept, informer la communauté et préparer l’ouverture officielle.
   </div>
 </section>
 
 <section id="soutenir">
   <h3 class="section-title">💚 Soutenir le projet</h3>
   <div class="big-box">
-    Soutenir FX Gaming Center, c’est encourager la création d’un espace gaming moderne
-    et accessible à Conakry.
-    <br><br>
-
-    <button class="support-btn" onclick="showSupport()">Soutenir le projet</button>
-
+    Soutenir FX Gaming Center, c’est encourager la création d’un espace gaming moderne,
+    accessible et sécurisé à Conakry.
+    <button class="support-btn" id="supportBtn">Soutenir le projet</button>
     <div class="support-msg" id="supportMsg">
       🙏 Merci pour ton soutien !  
       Chaque encouragement aide à faire avancer le projet FX Gaming Center.
@@ -147,43 +207,44 @@ footer{padding:20px;text-align:center;opacity:.6}
   </div>
 </section>
 
-<section id="tarifs">
-  <h3 class="section-title">Tarifs</h3>
-  <p style="text-align:center">💡 Tarifs annoncés prochainement.</p>
-</section>
-
-<section id="contact" class="contact">
+<section id="contact">
   <h3 class="section-title">Contact</h3>
-  <p>📍 Conakry, Guinée</p>
-  <p>📧 fxgamingcenter@gmail.com</p>
+  <div class="big-box">
+    📍 Conakry, Guinée<br>
+    📧 fxgamingcenter@gmail.com
+  </div>
 </section>
 
 <footer>© 2026 FX Gaming Center</footer>
 
 <script>
-/* ÉTOILES */
-const c=document.getElementById("stars-bg"),x=c.getContext("2d");
-let w,h,s=[];
-function r(){w=c.width=innerWidth;h=c.height=innerHeight}
-addEventListener("resize",r);r();
-for(let i=0;i<120;i++)s.push({x:Math.random()*w,y:Math.random()*h,r:Math.random()*2,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3});
-(function a(){
-x.clearRect(0,0,w,h);
-s.forEach(e=>{
-e.x+=e.vx;e.y+=e.vy;
-if(e.x<0)e.x=w;if(e.x>w)e.x=0;
-if(e.y<0)e.y=h;if(e.y>h)e.y=0;
-x.beginPath();x.arc(e.x,e.y,e.r,0,7);x.fillStyle="white";x.fill();
-});
-requestAnimationFrame(a);
+/* ===== ÉTOILES ===== */
+const c=document.getElementById("stars-bg"),ctx=c.getContext("2d");
+function resize(){c.width=innerWidth;c.height=innerHeight}
+addEventListener("resize",resize);resize();
+let stars=[...Array(140)].map(()=>({
+ x:Math.random()*c.width,
+ y:Math.random()*c.height,
+ r:Math.random()*1.5+0.5,
+ vx:(Math.random()-.5)*.3,
+ vy:(Math.random()-.5)*.3
+}));
+(function anim(){
+ ctx.clearRect(0,0,c.width,c.height);
+ stars.forEach(s=>{
+  s.x+=s.vx;s.y+=s.vy;
+  if(s.x<0)s.x=c.width;if(s.x>c.width)s.x=0;
+  if(s.y<0)s.y=c.height;if(s.y>c.height)s.y=0;
+  ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+  ctx.fillStyle="rgba(255,255,255,.8)";ctx.fill();
+ });
+ requestAnimationFrame(anim);
 })();
 
-/* SOUTIEN */
-function showSupport(){
-  const m=document.getElementById("supportMsg");
-  m.style.display="block";
-  setTimeout(()=>m.style.opacity=1,50);
-}
+/* ===== SOUTENIR ===== */
+document.getElementById("supportBtn").onclick=()=>{
+ document.getElementById("supportMsg").style.display="block";
+};
 </script>
 
 </body>
