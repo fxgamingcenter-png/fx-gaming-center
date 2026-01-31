@@ -7,11 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="FX Gaming Center est un futur centre de jeux vidéo et d’arcade à Conakry. PS4, PS5, arcade, espace détente. Ouverture prochaine.">
 
-  <!-- Favicon (optionnel, quand tu l'auras) -->
-  <!-- <link rel="icon" href="favicon.png"> -->
-
   <style>
-    /* ================= BASE ================= */
+    /* ===== BASE ===== */
     * {
       margin: 0;
       padding: 0;
@@ -26,11 +23,11 @@
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
-    /* ================= HEADER ================= */
+    /* ===== HEADER ===== */
     header {
       position: fixed;
       top: 0;
@@ -53,14 +50,15 @@
     nav a {
       margin-left: 20px;
       font-weight: 500;
-      transition: color 0.3s;
+      transition: color 0.3s, text-shadow 0.3s;
     }
 
     nav a:hover {
       color: #4de1ff;
+      text-shadow: 0 0 8px rgba(77,225,255,0.8);
     }
 
-    /* ================= SECTIONS ================= */
+    /* ===== SECTIONS ===== */
     section {
       padding: 110px 30px;
       max-width: 1200px;
@@ -74,7 +72,7 @@
       text-shadow: 0 0 8px rgba(77,225,255,0.6);
     }
 
-    /* ================= HERO ================= */
+    /* ===== HERO ===== */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -82,11 +80,27 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      position: relative;
     }
 
-    .hero p {
-      margin-top: 10px;
-      opacity: 0.9;
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 320px;
+      height: 140px;
+      background: rgba(77,225,255,0.35);
+      filter: blur(90px);
+      z-index: 0;
+    }
+
+    .hero h2,
+    .hero p,
+    .opening {
+      position: relative;
+      z-index: 1;
     }
 
     .opening {
@@ -98,7 +112,7 @@
       font-size: 14px;
     }
 
-    /* ================= CARTES ================= */
+    /* ===== CARTES ===== */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -123,6 +137,8 @@
       width: 100%;
       border-radius: 14px;
       margin-bottom: 15px;
+      object-fit: cover;
+      max-height: 160px;
     }
 
     .card h4 {
@@ -135,23 +151,37 @@
       opacity: 0.95;
     }
 
-    /* ================= WHATSAPP ================= */
-    .whatsapp {
+    /* ===== SOUTENIR ===== */
+    .soutenir-card {
+      max-width: 500px;
+      margin: auto;
+      animation: floatSoft 6s ease-in-out infinite;
+    }
+
+    .soutenir-btn {
       display: inline-block;
       margin-top: 20px;
-      padding: 12px 25px;
-      background: #25D366;
-      border-radius: 25px;
-      font-weight: bold;
+      padding: 14px 30px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #4de1ff, #7a5cff);
       color: #fff;
-      transition: background 0.3s;
+      font-weight: bold;
+      box-shadow: 0 0 15px rgba(77,225,255,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .whatsapp:hover {
-      background: #1ebe5d;
+    .soutenir-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 30px rgba(77,225,255,0.9);
     }
 
-    /* ================= FOOTER ================= */
+    @keyframes floatSoft {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* ===== FOOTER ===== */
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -161,7 +191,7 @@
       opacity: 0.85;
     }
 
-    /* ================= RESPONSIVE ================= */
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 600px) {
       header {
         flex-direction: column;
@@ -173,25 +203,23 @@
 
 <body>
 
-<!-- ================= HEADER ================= -->
 <header>
   <h1>FX Gaming Center</h1>
   <nav>
     <a href="#services">Services</a>
     <a href="#projet">Projet</a>
     <a href="#tarifs">Tarifs</a>
+    <a href="#soutenir">Soutenir</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<!-- ================= HERO ================= -->
 <section class="hero">
   <h2>Centre de jeux & arcade</h2>
   <p>Conakry, Guinée</p>
   <div class="opening">🎮 Ouverture prochaine</div>
 </section>
 
-<!-- ================= SERVICES ================= -->
 <section id="services">
   <h3>Nos services</h3>
   <div class="cards">
@@ -200,13 +228,11 @@
       <h4>PS4 / PS5</h4>
       <p>Sessions de jeu multijoueur et solo dans un espace confortable.</p>
     </div>
-
     <div class="card">
       <img src="arcade.jpg" alt="Arcade">
       <h4>Arcade</h4>
       <p>Machines fun et accessibles pour tous les âges.</p>
     </div>
-
     <div class="card">
       <img src="kids.jpg" alt="Espace détente">
       <h4>Espace détente</h4>
@@ -215,14 +241,13 @@
   </div>
 </section>
 
-<!-- ================= PROJET ================= -->
 <section id="projet">
   <h3>Le projet FX Gaming Center</h3>
   <div class="card">
     <p>
       FX Gaming Center est un projet de centre de jeux vidéo et d’arcade moderne
       situé à Conakry. L’objectif est de créer un espace sécurisé, accessible
-      et convivial, dédié au divertissement et au gaming.
+      et convivial dédié au divertissement et au gaming.
     </p>
     <p>
       Ce site sert à présenter le projet, informer la communauté
@@ -231,31 +256,39 @@
   </div>
 </section>
 
-<!-- ================= TARIFS ================= -->
 <section id="tarifs">
   <h3>Tarifs</h3>
   <div class="card">
     <p>
-      Les tarifs seront communiqués prochainement.
-      FX Gaming Center proposera des cartes rechargeables,
+      Les tarifs seront annoncés prochainement.
+      Le centre proposera des cartes rechargeables,
       différentes durées de jeu et des offres adaptées à tous.
     </p>
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
+<section id="soutenir">
+  <h3>Soutenir le projet</h3>
+  <div class="card soutenir-card">
+    <p>
+      FX Gaming Center est actuellement en développement.
+      Si tu soutiens l’initiative et veux aider à sa réalisation,
+      tu peux participer à l’évolution du projet.
+    </p>
+    <a class="soutenir-btn" href="https://wa.me/224627543486" target="_blank">
+      🤝 Soutenir le projet
+    </a>
+  </div>
+</section>
+
 <section id="contact">
   <h3>Contact</h3>
   <div class="card">
     <p>📍 Conakry, Guinée</p>
     <p>📧 fxgamingcenter@gmail.com</p>
-    <a class="whatsapp" href="https://wa.me/224627543486" target="_blank">
-      💬 Contacter sur WhatsApp
-    </a>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer>
   © 2026 FX Gaming Center — Tous droits réservés
 </footer>
