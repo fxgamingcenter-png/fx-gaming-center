@@ -190,3 +190,75 @@ footer {
   line-height: 1.6;
   opacity: 0.9;
 }
+
+
+/* ===== FX GAMING CENTER 2.0 – PATCH CSS (SAFE) ===== */
+
+/* Animation douce globale */
+* {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              box-shadow 0.3s ease,
+              transform 0.3s ease;
+}
+
+/* Néon plus clean sur titres */
+h1, h2, h3, h4 {
+  text-shadow:
+    0 0 6px rgba(77, 225, 255, 0.6),
+    0 0 12px rgba(77, 225, 255, 0.4);
+}
+
+/* Hover texte navigation */
+nav a:hover {
+  text-shadow: 0 0 8px rgba(77, 225, 255, 0.8);
+}
+
+/* Cartes : effet premium */
+.card {
+  border: 1px solid rgba(77, 225, 255, 0.15);
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow:
+    0 0 20px rgba(77, 225, 255, 0.35),
+    inset 0 0 10px rgba(255,255,255,0.05);
+}
+
+/* Images mieux cadrées */
+.card img {
+  object-fit: cover;
+  max-height: 160px;
+}
+
+/* Flou HERO plus discret */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(77,225,255,0.18),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+/* Bouton WhatsApp plus smooth */
+.whatsapp {
+  box-shadow: 0 0 10px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp:hover {
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.8);
+  transform: scale(1.05);
+}
+
+/* Mobile : réduire effets lourds */
+@media (max-width: 600px) {
+  .card:hover {
+    transform: none;
+    box-shadow: 0 0 12px rgba(77,225,255,0.25);
+  }
+}
