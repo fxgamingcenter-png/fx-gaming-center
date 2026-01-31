@@ -2,194 +2,151 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>FX Gaming Center – Centre de jeux & arcade à Conakry</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FX Gaming Center – Centre de jeux & arcade à Conakry</title>
 
 <style>
-/* ================= BASE ================= */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
+/* ===== RESET ===== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 body{
-  background: linear-gradient(
-    120deg,
-    rgba(10,22,51,0.92),
-    rgba(43,10,69,0.92)
-  );
-  color:#ffffff;
+  background:#050b1e;
+  color:#fff;
   overflow-x:hidden;
 }
 
-/* ===== ÉTOILES (CANVAS) ===== */
+/* ===== ÉTOILES ===== */
 #stars-bg{
   position:fixed;
-  inset:0;
+  top:0;left:0;
+  width:100vw;
+  height:100vh;
   z-index:0;
   pointer-events:none;
 }
 
-/* Tout le contenu AU-DESSUS des étoiles */
-header, section, footer{
-  position:relative;
-  z-index:1;
-}
-
-/* ================= HEADER ================= */
+/* ===== NAV ===== */
 header{
   position:fixed;
-  top:0;
+  top:0;left:0;
   width:100%;
-  padding:20px 40px;
+  padding:15px 40px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:rgba(0,0,0,0.4);
-  backdrop-filter: blur(8px);
+  background:rgba(5,15,40,0.6);
+  backdrop-filter:blur(10px);
   z-index:10;
 }
-
 header h1{
-  color:#4de1ff;
-  text-shadow:0 0 12px rgba(77,225,255,0.8);
+  color:#4dfcff;
 }
-
 nav a{
+  color:white;
   margin-left:20px;
-  color:#ddd;
   text-decoration:none;
-  font-weight:500;
+  font-weight:600;
 }
-nav a:hover{
-  color:#4de1ff;
-}
+nav a:hover{color:#4dfcff}
 
-/* ================= HERO ================= */
+/* ===== HERO ===== */
 .hero{
   min-height:100vh;
-  padding-top:120px;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   text-align:center;
   position:relative;
+  z-index:2;
 }
-
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.25);
-  backdrop-filter: blur(12px);
-  z-index:-1;
-}
-
 .hero h2{
-  font-size:2.6rem;
-  color:#4de1ff;
-  text-shadow:0 0 25px rgba(77,225,255,0.9);
+  font-size:42px;
+  color:#4dfcff;
+  text-shadow:0 0 25px rgba(77,252,255,.8);
 }
-
-.hero p{
-  margin-top:10px;
-  opacity:0.9;
-}
-
-.badge{
+.hero p{opacity:.9;margin-top:10px}
+.hero .btn{
   margin-top:25px;
-  padding:12px 26px;
+  padding:12px 25px;
   border-radius:30px;
-  background:rgba(255,255,255,0.15);
-  backdrop-filter: blur(6px);
+  background:rgba(255,255,255,.15);
+  color:white;
+  text-decoration:none;
+  backdrop-filter:blur(8px);
 }
 
-/* ================= SECTIONS ================= */
+/* ===== SECTIONS ===== */
 section{
-  padding:90px 40px;
-  max-width:1200px;
-  margin:auto;
+  padding:80px 10%;
+  position:relative;
+  z-index:2;
 }
-
-section h3{
+.section-title{
   text-align:center;
-  font-size:2rem;
-  margin-bottom:35px;
-  color:#4de1ff;
+  color:#4dfcff;
+  margin-bottom:40px;
+  font-size:28px;
 }
 
-/* ================= CARDS ================= */
+/* ===== CARDS ===== */
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
 }
-
 .card{
-  background:rgba(255,255,255,0.12);
-  border-radius:18px;
-  padding:22px;
-  backdrop-filter: blur(8px);
-  transition:0.3s;
+  background:rgba(255,255,255,.08);
+  border-radius:16px;
+  padding:20px;
+  backdrop-filter:blur(10px);
+  transition:.3s;
 }
-
 .card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 0 30px rgba(77,225,255,0.35);
+  transform:translateY(-8px);
+  box-shadow:0 0 25px rgba(77,252,255,.4);
 }
-
 .card img{
   width:100%;
-  height:180px;
-  object-fit:cover;
-  border-radius:14px;
+  border-radius:12px;
   margin-bottom:15px;
 }
 
-.card h4{
-  color:#4de1ff;
-  margin-bottom:10px;
+/* ===== PROJET ===== */
+.projet-box{
+  background:rgba(255,255,255,.1);
+  padding:25px;
+  border-radius:18px;
+  line-height:1.6;
 }
 
-/* ================= TEXT BOX ================= */
-.box{
-  background:rgba(255,255,255,0.12);
-  padding:30px;
-  border-radius:20px;
-  backdrop-filter: blur(8px);
-  line-height:1.7;
-}
-
-/* ================= SOUTENIR ================= */
-.soutenir a{
-  display:inline-block;
-  margin-top:25px;
-  padding:14px 32px;
-  border-radius:30px;
-  background:#25D366;
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
-}
-.soutenir a:hover{
-  box-shadow:0 0 25px rgba(37,211,102,0.7);
-  transform:scale(1.05);
-}
-
-/* ================= FOOTER ================= */
-footer{
+/* ===== TARIFS ===== */
+.tarif{
   text-align:center;
-  padding:40px;
-  background:rgba(0,0,0,0.4);
-  opacity:0.85;
+  font-size:18px;
+  opacity:.9;
+}
+
+/* ===== CONTACT ===== */
+.contact{
+  text-align:center;
+}
+.contact a{
+  color:#4dfcff;
+  text-decoration:none;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  padding:20px;
+  text-align:center;
+  opacity:.6;
 }
 </style>
 </head>
 
 <body>
+
+<canvas id="stars-bg"></canvas>
 
 <header>
   <h1>FX Gaming Center</h1>
@@ -197,7 +154,6 @@ footer{
     <a href="#services">Services</a>
     <a href="#projet">Projet</a>
     <a href="#tarifs">Tarifs</a>
-    <a href="#soutenir">Soutenir</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -205,144 +161,105 @@ footer{
 <section class="hero">
   <h2>Centre de jeux & arcade</h2>
   <p>Conakry, Guinée</p>
-  <div class="badge">🎮 Ouverture prochaine</div>
+  <a class="btn">🎮 Ouverture prochaine</a>
 </section>
 
 <section id="services">
-  <h3>Nos services</h3>
+  <h3 class="section-title">Nos services</h3>
   <div class="cards">
     <div class="card">
       <img src="console.jpg" alt="PS4 PS5">
       <h4>PS4 / PS5</h4>
-      <p>
-        Consoles modernes avec des jeux populaires comme FIFA, GTA,
-        Call of Duty et Fortnite. Jouez seul ou entre amis dans un cadre confortable.
-      </p>
+      <p>Jeux modernes, multijoueur, FIFA, GTA, Call of Duty.</p>
     </div>
-
     <div class="card">
       <img src="arcade.jpg" alt="Arcade">
       <h4>Arcade</h4>
-      <p>
-        Machines d’arcade modernes et rétro pour revivre les classiques
-        et découvrir de nouvelles expériences.
-      </p>
+      <p>Machines rétro et modernes pour tous les âges.</p>
     </div>
-
     <div class="card">
       <img src="kids.jpg" alt="Espace détente">
       <h4>Espace détente</h4>
-      <p>
-        Un espace convivial et sécurisé pour se détendre,
-        discuter et profiter de l’ambiance gaming.
-      </p>
+      <p>Ambiance conviviale, sécurisée et relax.</p>
     </div>
   </div>
 </section>
 
 <section id="projet">
-  <h3>Le projet FX Gaming Center</h3>
-  <div class="box">
-    FX Gaming Center est un projet de centre de jeux vidéo et d’arcade moderne situé à Conakry.
+  <h3 class="section-title">Le projet FX Gaming Center</h3>
+  <div class="projet-box">
+    FX Gaming Center est un projet de centre de jeux vidéo et d’arcade moderne à Conakry.
     <br><br>
-    L’objectif est de créer un lieu accessible, sécurisé et amusant pour les jeunes,
-    les familles et les passionnés de gaming.
+    L’objectif est de créer un espace sécurisé, accessible et fun pour les jeunes, les familles
+    et les passionnés de gaming.  
     <br><br>
-    Ce site permet de présenter le concept, informer la communauté,
-    annoncer les nouveautés et préparer l’ouverture officielle du centre.
+    Ce site sert à présenter le concept, informer la communauté et préparer l’ouverture officielle.
   </div>
 </section>
 
 <section id="tarifs">
-  <h3>Tarifs</h3>
-  <div class="box">
-    Les tarifs seront annoncés prochainement.
-    <br><br>
-    Le centre proposera des cartes rechargeables,
-    des formules horaires et des offres adaptées à tous les profils de joueurs.
-  </div>
+  <h3 class="section-title">Tarifs</h3>
+  <p class="tarif">💡 Les tarifs seront annoncés très prochainement selon les services et formules.</p>
 </section>
 
-<section id="soutenir" class="soutenir">
-  <h3>Soutenir le projet</h3>
-  <div class="box">
-    Tu peux soutenir FX Gaming Center en partageant le projet,
-    en proposant des idées ou des partenariats.
-    <br><br>
-    📱 Contact WhatsApp :
-    <br>
-    <a href="https://wa.me/224627543486" target="_blank">
-      +224 627 543 486
+<section id="contact" class="contact">
+  <h3 class="section-title">Contact</h3>
+  <p>📍 Conakry, Guinée</p>
+  <p>📧 fxgamingcenter@gmail.com</p>
+  <p>
+    💬 <a href="https://wa.me/224627543486" target="_blank">
+      Nous contacter sur WhatsApp
     </a>
-  </div>
-</section>
-
-<section id="contact">
-  <h3>Contact</h3>
-  <div class="box">
-    📍 Conakry, Guinée  
-    <br><br>
-    📧 fxgamingcenter@gmail.com  
-    <br><br>
-    📱 +224 627 543 486
-  </div>
+  </p>
 </section>
 
 <footer>
-  © 2026 FX Gaming Center – Tous droits réservés
+  © 2026 FX Gaming Center
 </footer>
 
-<!-- ================= JS ÉTOILES ================= -->
 <script>
-const canvas = document.createElement("canvas");
-canvas.id = "stars-bg";
-document.body.prepend(canvas);
-
-const ctx = canvas.getContext("2d");
-let stars = [];
-const STAR_COUNT = window.innerWidth < 600 ? 50 : 110;
+/* ===== JS ÉTOILES ===== */
+const canvas=document.getElementById("stars-bg");
+const ctx=canvas.getContext("2d");
+let stars=[];
 
 function resize(){
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  canvas.width=window.innerWidth;
+  canvas.height=window.innerHeight;
 }
-window.addEventListener("resize", resize);
+window.addEventListener("resize",resize);
 resize();
 
-function createStars(){
-  stars = [];
-  for(let i=0;i<STAR_COUNT;i++){
+function init(){
+  stars=[];
+  for(let i=0;i<120;i++){
     stars.push({
-      x: Math.random()*canvas.width,
-      y: Math.random()*canvas.height,
-      r: Math.random()*1.6+0.4,
-      vx:(Math.random()-.5)*0.25,
-      vy:(Math.random()-.5)*0.25,
-      o: Math.random()*0.6+0.2
+      x:Math.random()*canvas.width,
+      y:Math.random()*canvas.height,
+      r:Math.random()*1.8+0.5,
+      vx:(Math.random()-0.5)*0.3,
+      vy:(Math.random()-0.5)*0.3
     });
   }
 }
+init();
 
 function animate(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
-  for(const s of stars){
-    s.x += s.vx;
-    s.y += s.vy;
-
-    if(s.x<0) s.x = canvas.width;
-    if(s.x>canvas.width) s.x = 0;
-    if(s.y<0) s.y = canvas.height;
-    if(s.y>canvas.height) s.y = 0;
-
+  stars.forEach(s=>{
+    s.x+=s.vx;
+    s.y+=s.vy;
+    if(s.x<0)s.x=canvas.width;
+    if(s.x>canvas.width)s.x=0;
+    if(s.y<0)s.y=canvas.height;
+    if(s.y>canvas.height)s.y=0;
     ctx.beginPath();
-    ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
-    ctx.fillStyle = `rgba(255,255,255,${s.o})`;
+    ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+    ctx.fillStyle="rgba(255,255,255,0.8)";
     ctx.fill();
-  }
+  });
   requestAnimationFrame(animate);
 }
-
-createStars();
 animate();
 </script>
 
