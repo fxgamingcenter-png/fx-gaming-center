@@ -366,3 +366,22 @@ nav a:hover {
     transform: none;
   }
 }
+
+
+/* ===== BACKGROUND ÉTOILES DISCRÈTES ===== */
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.25), transparent),
+    radial-gradient(1px 1px at 80% 60%, rgba(255,255,255,0.2), transparent),
+    radial-gradient(1px 1px at 50% 80%, rgba(255,255,255,0.15), transparent),
+    radial-gradient(1px 1px at 10% 70%, rgba(255,255,255,0.2), transparent),
+    radial-gradient(1px 1px at 90% 20%, rgba(255,255,255,0.18), transparent);
+  background-size: 400px 400px;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.6;
+}
