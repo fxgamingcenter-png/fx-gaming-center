@@ -385,3 +385,28 @@ body::after {
   z-index: -1;
   opacity: 0.6;
 }
+
+
+/* ===== BACKGROUND ÉTOILES FIX ===== */
+#stars-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* IMPORTANT : laisser passer les étoiles */
+body {
+  background: linear-gradient(120deg,
+    rgba(10, 22, 51, 0.92),
+    rgba(43, 10, 69, 0.92)
+  );
+}
+
+/* Le contenu passe au-dessus des étoiles */
+header,
+section,
+footer {
+  position: relative;
+  z-index: 1;
+}
